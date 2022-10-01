@@ -8,8 +8,11 @@ const router = Router()
 // GET localhost:3000/profiles
 router.get('/', profilesCtrl.index)
 
+// GET localhost:3000/profiles/show
+router.get('/:id', isLoggedIn, profilesCtrl.show)
+
 // GET localhost:3000/profiles/admin
-router.get('/admin', profilesCtrl.index)
+router.get('/admin', isLoggedIn, profilesCtrl.index)
 
 export {
   router

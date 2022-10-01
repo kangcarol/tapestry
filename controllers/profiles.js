@@ -15,6 +15,22 @@ function index(req, res) {
   })
 }
 
+function show(req, res) {
+  Profile.findById(req.params.id)
+  .then(profile => {
+    const isSelf = profile._id.equals(req.user.profile._id)
+    res.render('profiles/show', {
+      title: `${profile.name}'s profile`,
+      isSelf,
+      profile,
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/profiles')
+  })
+}
+
 function admin(req, res) { //!add in if conditional
   Profile.find({})
   .then(profiles => {
@@ -31,5 +47,6 @@ function admin(req, res) { //!add in if conditional
 
 export {
   index,
+  show,
   admin
 }
