@@ -14,14 +14,13 @@
     <a href="/profiles/<%= user.profile._id %>">
       <% if (user?.profile.avatar) { %>
         <div>
-          <img
+          <img id="avatar"
             src="<%= user.profile.avatar %>"
             alt="<%= user.profile.name %> avatar"
           />
         </div>
     </a>
     <% } %>
-    <!-- above line was added by CK -->
   <% } %>
 
   <!-- <#% if (user) && (profile.admin) { %>
