@@ -5,6 +5,9 @@ import { isLoggedIn } from '../middleware/middleware.js'
 const router = Router()
 
 
+// GET localhost:3000/answers
+router.get('/', answersCtrl.index)
+
 
 export {
   router

@@ -1,0 +1,24 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>ANSWERS FEED</h1>
+
+<!-- attach the question -->
+  <ul>
+    <% answers.forEach(answer => { %>
+      <li>
+        <a href="/answers/<%= answer._id %>"><%= answer.text %></a>
+
+        <% if (user) { %>
+          <form action="/answers" method="POST">
+            <input type="text" name="text" autocomplete="off">
+            <button type="submit">Add Answer</button>
+          </form>
+        <% } %>
+
+    <% }) %>
+  </ul>
+</section>
+
+<%- include('../partials/footer') %>
