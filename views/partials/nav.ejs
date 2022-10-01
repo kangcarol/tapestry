@@ -23,8 +23,8 @@
     <% } %>
   <% } %>
 
-  <!-- <#% if (user) && (profile.admin) { %>
-    <a href="/admin">Admin</a>
-  <#% } %> -->
+  <% if (profile.admin) { %>
+    <a href="/profile/admin">Admin</a>
+  <% } %>
 
 </nav>

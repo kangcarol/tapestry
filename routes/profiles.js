@@ -12,7 +12,7 @@ router.get('/', profilesCtrl.index)
 router.get('/:id', isLoggedIn, profilesCtrl.show)
 
 // GET localhost:3000/profiles/admin
-router.get('/admin', isLoggedIn, profilesCtrl.index)
+router.get('/profiles/admin', isLoggedIn, profilesCtrl.index)
 
 export {
   router
