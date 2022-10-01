@@ -11,7 +11,16 @@
 
   <% if (user) { %>
     <a href="/auth/logout">Log Out</a>
-    <a href="/profiles/<%= user.profile._id %>">Self</a>
+    <a href="/profiles/<%= user.profile._id %>">
+      <% if (user?.profile.avatar) { %>
+        <div>
+          <img
+            src="<%= user.profile.avatar %>"
+            alt="<%= user.profile.name %> avatar"
+          />
+        </div>
+    </a>
+    <% } %>
     <!-- above line was added by CK -->
   <% } %>
 
