@@ -1,7 +1,17 @@
 import { Question } from '../models/question.js'
 
 function index(req, res) {
-  console.log("QUESTIONS CONTROLLER")
+  Question.find({})
+  .then(questions => {
+    res.render('questions/index', {
+      questions,
+      title: "Questions"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
 }
 
 export {

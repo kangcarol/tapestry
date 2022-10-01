@@ -6,8 +6,8 @@ const profileSchema = new Schema({
   admin: Boolean,
   name: String,
   avatar: String,
-  answers: [{ObjectId, ref: "Answer"}],
-  questions: {ObjectId, ref: "Question"}, //optional
+  answers: [{ type: Schema.Types.ObjectId, ref: "Answer" }],
+  questions: { type: Schema.Types.ObjectId, ref: "Question" }
 }, {
   timestamps: true
 })

@@ -2,15 +2,40 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img
-        src="<%= user.profile.avatar %>"
-        alt="<%= user.profile.name %> avatar"
-      />
-    </div>
-  <% } %>
+  <div>
+    <h1 id="logo">TAPESTRY</h1>
+  </div>
+  <div>
+    <h4>Share your experiences & learn about others</h4>
+  </div>
+  <div>
+
+    <% if (user) { %>
+      <a href="/auth/logout">Login</a>
+    <% } else { %>
+      <div
+        id="g_id_onload"
+        data-client_id="<%= googleClientID %>"
+        data-login_uri="/auth/google"
+        data-auto_prompt="false"
+      ></div>
+      <div
+        class="g_id_signin"
+        data-type="standard"
+        data-size="large"
+        data-theme="outline"
+        data-text="sign_in_with"
+        data-shape="rectangular"
+        data-logo_alignment="left"
+      ></div>
+    <% } %>
+  </div>
+  <div>
+    <h3>"We don't accomplish anything in this life alone...and whatever happens is the result of the whole tapestry of one's life and all the weavings of individual threads from one to another that creates something." </h3>
+    <p>- Sandra Day O'Connor</p>
+  </div>
+
+
 </main>
 
 <%- include('./partials/footer') %>

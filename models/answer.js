@@ -4,8 +4,8 @@ const Schema = mongoose.Schema
 
 const answerSchema = new Schema({
   text: String,
-  question: {ObjectId, ref:'Question'},
-  author: {ObjectId, ref:'Profile'}
+  question: { type: Schema.Types.ObjectId, ref: "Question" },
+  author: { type: Schema.Types.ObjectId, ref: "Profile" }
 }, {
   timestamps: true //just in case for future enhancements
 })

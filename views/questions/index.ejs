@@ -1,0 +1,24 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Questions</h1>
+  <h2>Click on a question to answer</h2>
+
+  <ul>
+    <% questions.forEach(taco => { %>
+      <li>
+        <a href="/questions/<%= question._id %>"><%= question.text %></a>
+
+        <% if (user) { %>
+          <form action="/questions" method="POST">
+            <input type="text" name="name" autocomplete="off">
+            <button type="submit">Add Answer</button>
+          </form>
+        <% } %>
+
+    <% }) %>
+  </ul>
+</section>
+
+<%- include('../partials/footer') %>
