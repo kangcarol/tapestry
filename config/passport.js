@@ -29,7 +29,7 @@ passport.use(
           .then(()=> {
             newUser.save()
             .then(() => {
-              return done(null, newUser) 
+              return done(null, newUser)
             })
             .catch(err => {
               if (err) {
@@ -37,7 +37,7 @@ passport.use(
                 // we just created to prevent orphan profiles.
                 Profile.findByIdAndDelete(newProfile._id)
                 return done(err)
-              } 
+              }
             })
           })
           .catch(err => {
@@ -58,7 +58,7 @@ passport.serializeUser(function (user, done) {
 
 passport.deserializeUser(function (id, done) {
   User.findById(id)
-  .populate('profile', 'name avatar')
+  .populate('profile', 'name avatar admin')
   .then(user => {
     done(null, user)
   })

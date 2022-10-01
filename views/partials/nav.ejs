@@ -21,10 +21,11 @@
         </div>
     </a>
     <% } %>
+    <% if (user.profile.admin) { %>
+      <a href="/profiles/admin">Admin</a>
+    <% } %>
   <% } %>
 
-  <% if (profile.admin) { %>
-    <a href="/profile/admin">Admin</a>
-  <% } %>
+
 
 </nav>
