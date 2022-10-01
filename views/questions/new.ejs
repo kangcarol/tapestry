@@ -1,0 +1,21 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+
+  <form id="add-question-form" action="/questions" method="POST">
+    <label for="text-input">Question:</label>
+    <input type="text" name="text" id="text-input">
+    <button class="btn btn-secondary" type="submit">Add a Question</button>
+  </form>
+
+    <ul>
+      <% questions.forEach(function(question) { %>
+        <li id="question-line"><%= question.text %></li>
+      <% }) %>
+    </ul>
+
+</main>
+
+<%- include('../partials/footer') %>

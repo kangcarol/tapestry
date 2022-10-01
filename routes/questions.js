@@ -7,6 +7,12 @@ const router = Router()
 // GET localhost:3000/questions
 router.get('/', questionsCtrl.index)
 
+// GET localhost:3000/questions/new
+router.get('/new', questionsCtrl.new)
+
+// POST localhost:3000/questions
+router.post('/', questionsCtrl.create)
+
 export {
   router
 }
