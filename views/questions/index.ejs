@@ -13,6 +13,7 @@
         <% if (user) { %>
           <form action="/answers" method="POST">
             <input type="text" name="text" autocomplete="off">
+            <input name="question" value="<%= question._id %>" type="hidden">
             <button type="submit">Add Answer</button>
           </form>
         <% } %>

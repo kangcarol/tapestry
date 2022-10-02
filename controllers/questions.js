@@ -1,5 +1,6 @@
 import { Question } from '../models/question.js'
 
+
 function index(req, res) {
   Question.find({})
   .then(questions => {

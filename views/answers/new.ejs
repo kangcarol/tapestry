@@ -1,21 +1,24 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<main>
-  <h1><%= title %></h1>
-
-  <!-- <form id="add-answer-form" action="/answers" method="POST">
-    <label for="text-input">Answer:</label>
-    <input type="text" name="text" id="text-input">
-    <button class="" type="submit">Add Answer</button>
-  </form> -->
+<section>
+  <h1>Questions</h1>
+  <h2>Click on a question to answer</h2>
 
   <ul>
-    <% questions.forEach(function(question) { %>
-      <li><%= question.text %></li>
+    <% questions.forEach(question => { %>
+      <li>
+        <%= question.text %></a>
+
+        <% if (user) { %>
+          <form action="/answers" method="POST">
+            <input type="text" name="text" autocomplete="off">
+            <button type="submit">Add Answer</button>
+          </form>
+        <% } %>
+
     <% }) %>
   </ul>
-
-</main>
+</section>
 
 <%- include('../partials/footer') %>

@@ -9,8 +9,11 @@
     <% answers.forEach(answer => { %>
       <li>
         <!-- add author's avatar and name -->
-        <%= answer.author %></a>
-        <%= answer.text %></a>
+        <%= answer.author.name %>
+        <img src="<%=answer.author.avatar %>">
+        <%= answer.question.text %>
+        <%= answer.text %>
+      </li>
     <% }) %>
   </ul>
 </section>
