@@ -10,6 +10,8 @@ router.get('/', answersCtrl.index)
 
 router.post('/', answersCtrl.create)
 
+router.delete('/:id', isLoggedIn, answersCtrl.deleteAnswer)
+
 export {
   router
 }

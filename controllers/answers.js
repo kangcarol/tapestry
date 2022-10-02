@@ -40,7 +40,34 @@ function create(req, res) {
 }
 
 
+function deleteAnswer(req, res) {
+  Answer.findById(req.params.id)
+  .then(answer => {
+    if (answer.author.equals(req.user.profile._id)){
+      answer.delete()
+      .then(()=>{
+        Profile.findById(req.user.profile._id)
+        .then(profile => {
+          profile.answers.remove(answer)
+          profile.save()
+          .then(() => {
+            res.redirect(`/answers`)
+          })
+        })
+      })
+    } else {
+      throw new Error('NOT AUTHORIZED')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/answers')
+  })
+}
+
+
 export {
   index,
   create,
+  deleteAnswer,
 }

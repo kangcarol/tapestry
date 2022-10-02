@@ -21,7 +21,7 @@
       <%= answer.text %>
       <% if (isSelf) { %>
         <form
-          action="/profiles/answers/<%= answer._id %>?_method=DELETE"
+          action="/answers/<%= answer._id %>?_method=DELETE"
           method="POST"
           style="display: inline-block;"
         >

@@ -1,3 +1,4 @@
+import { Answer } from '../models/answer.js'
 import { Profile } from '../models/profile.js'
 
 
@@ -31,25 +32,31 @@ function show(req, res) {
   })
 }
 
-
-function deleteAnswer(req, res) {
-  Profile.findById(req.user.profile._id)
-  .then(profile => {
-    profile.answers.remove({_id: req.params.id})
-    profile.save()
-    .then(() => {
-      res.redirect(`/profiles/${req.user.profile._id}`)
-    })
-    .catch(err => {
-      console.log(err)
-      res.redirect(`/profiles/${req.user.profile._id}`)
-    })
-  })
-  console.log('DELETE THIS ANSWER')
-}
+// //find the profile to delete
+// // from profile's answer array, remove the answer by id
+// // also, need to remove the answer from Answer collection
+// function deleteAnswer(req, res) {
+//   Profile.findById(req.user.profile._id)
+//   .then(profile => {
+//     profile.answers.remove({_id: req.params.id})
+//     profile.save()
+//     .then(() => {
+//       Answer.findById({_id:req.params.answerId})
+//       // console.log('{_id:req.params.answerId}', {_id:req.params.answerId})
+//     })
+//       .then(() => {
+//         res.redirect(`/profiles/${req.user.profile._id}`)
+//       })
+//     .catch(err => {
+//       console.log(err)
+//       res.redirect(`/profiles/${req.user.profile._id}`)
+//     })
+//   })
+//   console.log('DELETE THIS ANSWER')
+// }
 
 export {
   index,
   show,
-  deleteAnswer,
+  // deleteAnswer,
 }
