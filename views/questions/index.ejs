@@ -8,11 +8,11 @@
   <ul>
     <% questions.forEach(question => { %>
       <li>
-        <a href="/questions/<%= question._id %>"><%= question.text %></a>
+        <%= question.text %></a>
 
         <% if (user) { %>
-          <form action="/questions" method="POST">
-            <input type="text" name="name" autocomplete="off">
+          <form action="/answers" method="POST">
+            <input type="text" name="text" autocomplete="off">
             <button type="submit">Add Answer</button>
           </form>
         <% } %>

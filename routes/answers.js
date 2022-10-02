@@ -8,6 +8,7 @@ const router = Router()
 // GET localhost:3000/answers
 router.get('/', answersCtrl.index)
 
+router.post('/', answersCtrl.create)
 
 export {
   router
