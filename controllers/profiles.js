@@ -32,8 +32,24 @@ function show(req, res) {
 }
 
 
+function deleteAnswer(req, res) {
+  Profile.findById(req.user.profile._id)
+  .then(profile => {
+    profile.answers.remove({_id: req.params.id})
+    profile.save()
+    .then(() => {
+      res.redirect(`/profiles/${req.user.profile._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect(`/profiles/${req.user.profile._id}`)
+    })
+  })
+  console.log('DELETE THIS ANSWER')
+}
+
 export {
   index,
   show,
-
+  deleteAnswer,
 }

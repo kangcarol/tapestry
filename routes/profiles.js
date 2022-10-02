@@ -11,8 +11,7 @@ router.get('/', profilesCtrl.index)
 // GET localhost:3000/profiles/show
 router.get('/:id', isLoggedIn, profilesCtrl.show)
 
-// GET localhost:3000/profiles/admin
-router.get('/profiles/admin', isLoggedIn, profilesCtrl.index)
+router.delete('/answers/:id', isLoggedIn, profilesCtrl.deleteAnswer)
 
 export {
   router

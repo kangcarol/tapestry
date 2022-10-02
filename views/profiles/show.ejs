@@ -17,6 +17,7 @@
 <% if (profile.answers.length) { %>
   <% profile.answers.forEach(answer => { %>
     <h3>
+      <%= answer.question%>
       <%= answer.text %>
       <% if (isSelf) { %>
         <form
@@ -24,7 +25,7 @@
           method="POST"
           style="display: inline-block;"
         >
-          <button type="submit">delete <%= answer.text %></button>
+          <button type="submit">delete</button>
         </form>
       <% } %>
     </h3>
