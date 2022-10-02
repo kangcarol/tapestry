@@ -15,10 +15,12 @@ function index(req, res) {
 }
 
 function create(req, res) {
-  req.body.author = req.user.profile._id
+  req.body.author = req.user.profile.id
   console.log(req.body)
   Answer.create(req.body)
   .then(answer => {
+    // profiles.answers.push(req.body)
+    // profiles.answers.save()
     res.redirect('/answers')
   })
   .catch(err => {
@@ -26,6 +28,7 @@ function create(req, res) {
     res.redirect('/answers')
   })
 }
+
 
 export {
   index,

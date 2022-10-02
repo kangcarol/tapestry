@@ -14,4 +14,26 @@
   <% } %>
 </main>
 
+<% if (profile.answers.length) { %>
+  <% profile.answers.forEach(answer => { %>
+    <h3>
+      <%= answer.text %>
+      <% if (isSelf) { %>
+        <form
+          action="/profiles/answers/<%= answer._id %>?_method=DELETE"
+          method="POST"
+          style="display: inline-block;"
+        >
+          <button type="submit">delete <%= answer.text %></button>
+        </form>
+      <% } %>
+    </h3>
+  <% }) %>
+<% } else { %>
+  <h2>
+    <%= isSelf ? "You don't" : `${profile.name} doesn't` %> have any questions and answers!
+  </h2>
+<% } %>
+
+
 <%- include('../partials/footer') %>
