@@ -65,9 +65,20 @@ function deleteAnswer(req, res) {
   })
 }
 
+function update(req, res) {
+  Answer.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  .then(answer => {
+    res.redirect(`/profiles/${req.user.profile._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/profiles')
+  })
+}
 
 export {
   index,
   create,
   deleteAnswer,
+  update,
 }

@@ -2,24 +2,35 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1> <%= profile.name %></h1>
 
   <% if (profile.avatar) { %>
     <div>
       <img id="avatar"
-        src="<%= profile.avatar %>"
-        alt="<%= profile.name %> avatar"
+      src="<%= profile.avatar %>"
+      alt="<%= profile.name %> avatar"
       />
     </div>
-  <% } %>
+    <% } %>
+  <h1> <%= profile.name %></h1>
 </main>
 
 <% if (profile.answers.length) { %>
   <% profile.answers.forEach(answer => { %>
     <h3>
       <%= answer.question%>
-      <%= answer.text %>
+      <%#= answer.text %>
       <% if (isSelf) { %>
+        <input
+          type="text"
+          name="text"
+          value="<%= answer.text %>"
+          autocomplete="off"
+        >
+        <form
+          action="/answers/<%= answer._id %>?_method=PUT" method="POST"
+        >
+          <button type="submit">update</button>
+        </form>
         <form
           action="/answers/<%= answer._id %>?_method=DELETE"
           method="POST"
