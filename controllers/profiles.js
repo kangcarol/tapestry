@@ -18,15 +18,15 @@ function index(req, res) {
 
 function show(req, res) {
   Profile.findById(req.params.id)
+  .populate({
+    path: 'answers',
+    populate: {path: 'question'}
+  })
   .then(profile => {
-    const isSelf = profile._id.equals(req.user.profile._id)
-    .populate('answers')
-    .then(()=>{
-      res.render('profiles/show', {
-        title: `${profile.name}'s profile`,
-        isSelf,
-        profile,
-      })
+    console.log(profile, 'PROFILE')
+    res.render('profiles/show', {
+      title: `${profile.name}'s profile`,
+      profile,
     })
   })
   .catch(err => {

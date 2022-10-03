@@ -13,24 +13,37 @@
     <% } %>
   <h1> <%= profile.name %></h1>
 
+  <section>
+    <ul>
+      <% profile.answers.forEach(answer => { %>
+        <% if (answer.author.equals(profile._id)) { %>
+          <li>
 
-<% if (profile.answers.length) { %>
-  <% profile.answers.forEach(answer => { %>
-    <h3>
-      <%= answer%>
-    </h3>
-    <form
-      action="/answers/<%= answer._id %>/edit" method="GET"
-    >
-      <button type="submit">edit</button>
-    </form>
-  <% }) %>
-<% } else { %>
-  <h2>
-    <%= isSelf ? "You don't" : `${profile.name} doesn't` %> have any questions and answers!
-  </h2>
-<% } %>
-
+            <%= answer.question.text %>
+            <%= answer.text %>
+            <form
+              action="/answers/<%= answer._id %>?_method=PUT" method="POST"
+            >
+              <input
+                type="text"
+                name="text"
+                value=" <%= answer.text %> "
+                autocomplete="off"
+              >
+              <button type="submit">update</button>
+            </form>
+            <form
+              action="/answers/<%= answer._id %>?_method=DELETE"
+              method="POST"
+              style="display: inline-block;"
+            >
+              <button type="submit">delete</button>
+            </form>
+          </li>
+        <% } %>
+      <% }) %>
+    </ul>
+  </section>
 </main>
 
 <%- include('../partials/footer') %>

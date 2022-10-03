@@ -1,13 +1,18 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<section>
-  <h1>Profile page</h1>
+<main>
+  <div>
+    <img
+      class="profile-avatar"
+      src="<%= profile.avatar %>"
+      alt="<%= profile.name %>'s avatar"
+    >
+  </div>
 
   <ul>
     <% answers.forEach(answer => { %>
       <% if (answer.author.equals(user?.profile._id)) { %>
-        <!-- above needs to change out user to only the profile's id, need to get access to profile -->
         <li>
           <%= answer.author.name %>
           <div>
@@ -40,6 +45,7 @@
       <% } %>
     <% }) %>
   </ul>
-</section>
+
+</main>
 
 <%- include('../partials/footer') %>
