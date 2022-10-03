@@ -2,7 +2,7 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <h1>ANSWERS FEED</h1>
+  <h1>Profile page</h1>
 
   <ul>
     <% answers.forEach(answer => { %>
@@ -10,14 +10,11 @@
         <li>
           <%= answer.author.name %>
           <div>
-
             <img id="avatar"
               src="<%= answer.author.avatar %>"
               alt="<%= answer.author.name %> avatar"
             />
-
           </div>
-
           <% answer.question.text %>
           <%= answer.text %>
           <form
