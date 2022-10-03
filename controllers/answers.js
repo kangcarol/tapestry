@@ -68,25 +68,10 @@ function deleteAnswer(req, res) {
   })
 }
 
-// function edit(req, res) {
-//   Answer.find({})
-//   .then(answers => {
-//     console.log('answers', answers)
-//     res.render('answers/edit', {
-//       answers,
-//       title: 'Edit answer'
-//     })
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect('/answers')
-//   })
-// }
-
 function update(req, res) {
   Answer.findByIdAndUpdate(req.params.id, req.body, {new: true})
   .then(answer => {
-    console.log(req.body.text,'updated answer?')
+    console.log(req.body,'updated answer?')
     res.redirect(`/answers`)
   })
   .catch(err => {
@@ -95,10 +80,28 @@ function update(req, res) {
   })
 }
 
+function show(req, res){
+  Answer.find({})
+  .populate('question')
+  .populate('author')
+  .then(answers=> {
+    console.log('answers', answers)
+    res.render('answers/show', {
+      answers,
+      title: "Profile page"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
+
 export {
   index,
   create,
   deleteAnswer,
-  // edit,
   update,
+  show,
 }

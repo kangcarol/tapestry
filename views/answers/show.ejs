@@ -1,0 +1,47 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>ANSWERS FEED</h1>
+
+  <ul>
+    <% answers.forEach(answer => { %>
+      <% if (answer.author.equals(user?.profile._id)) { %>
+        <li>
+          <%= answer.author.name %>
+          <div>
+
+            <img id="avatar"
+              src="<%= answer.author.avatar %>"
+              alt="<%= answer.author.name %> avatar"
+            />
+
+          </div>
+          <% answer.question.text %>
+          <%= answer.text %>
+          <form
+            action="/answers/<%= answer._id %>?_method=PUT" method="POST"
+          >
+            <input
+              type="text"
+              name="text"
+              value=" <%= answer.text %> "
+              autocomplete="off"
+            >
+            <button type="submit">update</button>
+          </form>
+
+          <form
+            action="/answers/<%= answer._id %>?_method=DELETE"
+            method="POST"
+            style="display: inline-block;"
+          >
+            <button type="submit">delete</button>
+          </form>
+        </li>
+      <% } %>
+    <% }) %>
+  </ul>
+</section>
+
+<%- include('../partials/footer') %>

@@ -10,7 +10,7 @@ router.get('/', answersCtrl.index)
 
 router.post('/', answersCtrl.create)
 
-// router.get('/:id/edit', isLoggedIn, answersCtrl.edit)
+router.get('/show', isLoggedIn, answersCtrl.show)
 
 router.put('/:id', isLoggedIn, answersCtrl.update)
 

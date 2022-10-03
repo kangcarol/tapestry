@@ -19,27 +19,6 @@
         <%= answer.question.text %>
         <%= answer.text %>
 
-        <% if (answer.author.equals(user?.profile._id)) { %>
-        <% answer.question.text %>
-          <input
-            type="text"
-            name="text"
-            value=""  <%#= answer.text %>
-            autocomplete="off"
-          >
-          <form
-            action="/answers/<%= answer._id %>?_method=PUT" method="POST"
-          >
-            <button type="submit">update</button>
-          </form>
-          <form
-            action="/answers/<%= answer._id %>?_method=DELETE"
-            method="POST"
-            style="display: inline-block;"
-          >
-            <button type="submit">delete</button>
-          </form>
-        <% } %>
 
       </li>
     <% }) %>
