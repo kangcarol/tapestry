@@ -12,34 +12,18 @@
     </div>
     <% } %>
   <h1> <%= profile.name %></h1>
-</main>
+
 
 <% if (profile.answers.length) { %>
   <% profile.answers.forEach(answer => { %>
     <h3>
-      <%= answer.question%>
-      <%#= answer.text %>
-      <% if (isSelf) { %>
-        <input
-          type="text"
-          name="text"
-          value="<%= answer.text %>"
-          autocomplete="off"
-        >
-        <form
-          action="/answers/<%= answer._id %>?_method=PUT" method="POST"
-        >
-          <button type="submit">update</button>
-        </form>
-        <form
-          action="/answers/<%= answer._id %>?_method=DELETE"
-          method="POST"
-          style="display: inline-block;"
-        >
-          <button type="submit">delete</button>
-        </form>
-      <% } %>
+      <%= answer%>
     </h3>
+    <form
+      action="/answers/<%= answer._id %>/edit" method="GET"
+    >
+      <button type="submit">edit</button>
+    </form>
   <% }) %>
 <% } else { %>
   <h2>
@@ -47,5 +31,6 @@
   </h2>
 <% } %>
 
+</main>
 
 <%- include('../partials/footer') %>

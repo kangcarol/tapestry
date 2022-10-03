@@ -3,6 +3,8 @@ import { Question } from '../models/question.js'
 import { Profile } from '../models/profile.js'
 
 function index(req, res) {
+  // Profile.find({})
+  // .populate('profile')
   Answer.find({})
   .populate('question')
   .populate('author')
@@ -10,6 +12,7 @@ function index(req, res) {
     console.log('answers', answers)
     res.render('answers/index', {
       answers,
+      // profiles,
       title: "ANSWERS FEED"
     })
   })
@@ -65,10 +68,26 @@ function deleteAnswer(req, res) {
   })
 }
 
+// function edit(req, res) {
+//   Answer.find({})
+//   .then(answers => {
+//     console.log('answers', answers)
+//     res.render('answers/edit', {
+//       answers,
+//       title: 'Edit answer'
+//     })
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect('/answers')
+//   })
+// }
+
 function update(req, res) {
   Answer.findByIdAndUpdate(req.params.id, req.body, {new: true})
   .then(answer => {
-    res.redirect(`/profiles/${req.user.profile._id}`)
+    console.log(req.body.text,'updated answer?')
+    res.redirect(`/answers`)
   })
   .catch(err => {
     console.log(err)
@@ -80,5 +99,6 @@ export {
   index,
   create,
   deleteAnswer,
+  // edit,
   update,
 }
