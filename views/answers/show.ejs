@@ -7,6 +7,7 @@
   <ul>
     <% answers.forEach(answer => { %>
       <% if (answer.author.equals(user?.profile._id)) { %>
+        <!-- above needs to change out user to only the profile's id, need to get access to profile -->
         <li>
           <%= answer.author.name %>
           <div>
@@ -15,7 +16,7 @@
               alt="<%= answer.author.name %> avatar"
             />
           </div>
-          <% answer.question.text %>
+          <%= answer.question.text %>
           <%= answer.text %>
           <form
             action="/answers/<%= answer._id %>?_method=PUT" method="POST"
@@ -28,7 +29,6 @@
             >
             <button type="submit">update</button>
           </form>
-
           <form
             action="/answers/<%= answer._id %>?_method=DELETE"
             method="POST"
