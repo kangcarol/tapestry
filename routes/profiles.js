@@ -8,7 +8,7 @@ const router = Router()
 // GET localhost:3000/profiles
 router.get('/', profilesCtrl.index)
 
-// GET localhost:3000/profiles/show
+// GET localhost:3000/profiles/id
 router.get('/:id', isLoggedIn, profilesCtrl.show)
 
 export {
