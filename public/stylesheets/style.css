@@ -16,6 +16,7 @@ body {
   color: #f6f6f6;
   font-family: 'Poppins', sans-serif;
   margin: 0;
+  height: 100vh;
   /* Use a system font, if none are available use any found sans-sarif font */
   /* fsystem-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,'Helvetica Neue', sans-serif; */
 }
@@ -25,7 +26,7 @@ nav {
   color: white;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 5px;
   min-height: 40px;
 }
@@ -35,6 +36,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin: 100px 0 30px 0;
 }
 
 h1 {
@@ -106,7 +108,7 @@ nav > a {
 }
 
 #qa-div {
-  background-color: lightblue;
+  background-color:  rgb(130, 24, 7);
 }
 
 #update-form{
