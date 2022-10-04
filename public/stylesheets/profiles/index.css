@@ -41,3 +41,7 @@
   font-size: 24px;
   margin: 0 10px;
 }
+
+#avatar {
+  border-radius: 50%;
+}

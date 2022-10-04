@@ -7,7 +7,6 @@
   <div class="card-container">
     <% profiles.forEach(profile => { %>
       <a class="text-decoration-none" href="/profiles/<%= profile._id %>">
-
         <div class="card">
           <img id="avatar"
             src="<%= profile.avatar %>"
@@ -18,8 +17,6 @@
           </div>
         </div>
       </a>
-      <!-- <input name="question" value="<#%= question._id %>" type="hidden"> -->
-
     <% }) %>
   </div>
 </main>

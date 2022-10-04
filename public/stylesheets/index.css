@@ -1,0 +1,23 @@
+body {
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 85px;
+  /* padding: 80px 0 2px 0; */
+}
+
+h4, h3 {
+  font-size: 20px;
+}
+
+#google-login {
+  margin: 40px 0 40px 0;
+}
+
+#quote {
+  width: 40%;
+}

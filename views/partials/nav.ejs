@@ -11,20 +11,20 @@
 
   <% if (user) { %>
     <a href="/auth/logout">Log Out</a>
+    <% if (user.profile.admin) { %>
+      <a href="/questions/new">Admin</a>
+    <% } %>
     <a href="/profiles/<%= user.profile._id %>">
       <% if (user?.profile.avatar) { %>
-        <div>
+        <div >
           <img id="avatar"
             src="<%= user.profile.avatar %>"
             alt="<%= user.profile.name %> avatar"
-            height="60%"
-            width="60%"
+            height="50%"
+            width="50%"
           />
         </div>
     </a>
-    <% } %>
-    <% if (user.profile.admin) { %>
-      <a href="/questions/new">Admin</a>
     <% } %>
   <% } %>
 

@@ -1,15 +1,16 @@
 <%- include('./partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/index.css">
 <%- include('./partials/nav') %>
 
 <main>
+
   <div>
     <h1 id="logo">TAPESTRY</h1>
   </div>
-  <div>
-    <h4>Share your experiences & learn about others</h4>
-  </div>
-  <div>
 
+  <h4>Share your experiences & learn about others</h4>
+
+  <div id="google-login">
     <% if (user) { %>
       <!-- <a href="/auth/logout">Login</a> -->
       <h2>Let's get started answering questions!</h2>
@@ -31,11 +32,11 @@
       ></div>
     <% } %>
   </div>
-  <div>
+
+  <div id="quote">
     <h3>"We don't accomplish anything in this life alone...and whatever happens is the result of the whole tapestry of one's life and all the weavings of individual threads from one to another that creates something." </h3>
     <p>- Sandra Day O'Connor</p>
   </div>
-
 
 </main>
 
