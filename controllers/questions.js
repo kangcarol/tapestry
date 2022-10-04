@@ -40,8 +40,34 @@ function create(req, res) {
   })
 }
 
+function deleteQuestion(req, res) {
+  Question.findById(req.params.id)
+  .then(question => {
+    question.delete()
+    res.redirect(`/questions/new`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
+function update(req, res) {
+  Question.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  .then(question => {
+    console.log(req.body,'updated question?')
+    res.redirect(`/questions/new`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export {
   index,
   newQuestion as new,
-  create
+  create,
+  update,
+  deleteQuestion
 }

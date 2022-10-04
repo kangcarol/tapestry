@@ -9,7 +9,6 @@
     <% questions.forEach(question => { %>
       <li>
         <%= question.text %></a>
-
         <% if (user) { %>
           <form action="/answers" method="POST">
             <input type="text" name="text" autocomplete="off">
@@ -17,7 +16,7 @@
             <button type="submit">Add Answer</button>
           </form>
         <% } %>
-
+      </li>
     <% }) %>
   </ul>
 </section>

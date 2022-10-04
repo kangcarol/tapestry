@@ -13,6 +13,24 @@
     <ul>
       <% questions.forEach(function(question) { %>
         <li id="question-line"><%= question.text %></li>
+        <form
+        action="/questions/<%= question._id %>?_method=PUT" method="POST"
+        >
+        <input
+        type="text"
+        name="text"
+        value=" <%= question.text %> "
+        autocomplete="off"
+        >
+        <button type="submit">update</button>
+      </form>
+      <form
+        action="/questions/<%= question._id %>?_method=DELETE"
+        method="POST"
+        style="display: inline-block;"
+        >
+        <button type="submit">delete</button>
+      </form>
       <% }) %>
     </ul>
 
