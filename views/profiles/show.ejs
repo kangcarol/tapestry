@@ -4,7 +4,7 @@
 <main>
 
   <% if (profile.avatar) { %>
-    <div>
+    <div id="avatar-name-div">
       <img id="avatar"
       src="<%= profile.avatar %>"
       alt="<%= profile.name %> avatar"
@@ -17,28 +17,29 @@
     <ul>
       <% profile.answers.forEach(answer => { %>
         <% if (answer.author.equals(profile._id)) { %>
-          <li>
-            <%= answer.question.text %>
-            <%= answer.text %>
-            <form
-              action="/answers/<%= answer._id %>?_method=PUT" method="POST"
+          <li><%= answer.question.text %></li>
+          <li><%= answer.text %></li>
+          <div class="input-group">
+          <form id="update-form" action="/answers/<%= answer._id %>?_method=PUT" method="POST">
+            <input
+              class="form-control"
+              placeholder="Recipient's username"
+              aria-label="Recipient's username with two button addons"
+              type="text"
+              name="text"
+              value=" <%= answer.text %> "
+              autocomplete="off"
             >
-              <input
-                type="text"
-                name="text"
-                value=" <%= answer.text %> "
-                autocomplete="off"
-              >
-              <button type="submit">update</button>
-            </form>
-            <form
-              action="/answers/<%= answer._id %>?_method=DELETE"
-              method="POST"
-              style="display: inline-block;"
-            >
-              <button type="submit">delete</button>
-            </form>
-          </li>
+            <button class="btn btn-outline-secondary" type="submit">update</button>
+          </form>
+          <form
+            action="/answers/<%= answer._id %>?_method=DELETE"
+            method="POST"
+            style="display: inline-block;"
+          >
+            <button class="btn btn-outline-secondary" type="submit">delete</button>
+          </form>
+        </div>
         <% } %>
       <% }) %>
     </ul>

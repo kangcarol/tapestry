@@ -30,10 +30,6 @@ nav {
   min-height: 60px;
 }
 
-#avatar {
-  border-radius: 50%;
-}
-
 main {
   display: flex;
   align-items: center;
@@ -42,7 +38,8 @@ main {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 32px;
+  padding: 10px 0 0 0;
 }
 
 h2 {
@@ -98,4 +95,22 @@ nav > a {
 
 .profile-avatar {
   margin-top: 50px;
+}
+
+#avatar-name-div {
+  padding: 30px 0 0 0;
+}
+
+#avatar {
+  border-radius: 50%;
+}
+
+#qa-div {
+  background-color: lightblue;
+}
+
+#update-form{
+  display: flex;
+  flex-direction: row;
+  width: 600px;
 }

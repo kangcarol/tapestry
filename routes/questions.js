@@ -15,7 +15,7 @@ router.post('/', questionsCtrl.create)
 
 router.put('/:id', isLoggedIn, questionsCtrl.update)
 
-router.delete('/:id', isLoggedIn, questionsCtrl.deleteQuestion)
+// router.delete('/:id', isLoggedIn, questionsCtrl.deleteQuestion)
 
 export {
   router

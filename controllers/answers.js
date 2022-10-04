@@ -29,7 +29,7 @@ function create(req, res) {
       profile.answers.push(answer)
       profile.save()
       .then(()=>{
-        res.redirect('/answers')
+        res.redirect('/questions')
       })
     })
   })

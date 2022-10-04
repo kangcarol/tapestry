@@ -40,17 +40,17 @@ function create(req, res) {
   })
 }
 
-function deleteQuestion(req, res) {
-  Question.findById(req.params.id)
-  .then(question => {
-    question.delete()
-    res.redirect(`/questions/new`)
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/')
-  })
-}
+// function deleteQuestion(req, res) {
+//   Question.findById(req.params.id)
+//   .then(question => {
+//     question.delete()
+//     res.redirect(`/questions/new`)
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect('/')
+//   })
+// }
 
 function update(req, res) {
   Question.findByIdAndUpdate(req.params.id, req.body, {new: true})
@@ -69,5 +69,5 @@ export {
   newQuestion as new,
   create,
   update,
-  deleteQuestion
+  // deleteQuestion
 }
