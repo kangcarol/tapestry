@@ -10,8 +10,6 @@ router.get('/', answersCtrl.index)
 
 router.post('/', answersCtrl.create)
 
-router.get('/show', isLoggedIn, answersCtrl.show)
-
 router.put('/:id', isLoggedIn, answersCtrl.update)
 
 router.delete('/:id', isLoggedIn, answersCtrl.deleteAnswer)
