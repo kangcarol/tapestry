@@ -13,8 +13,6 @@
     <% } %>
   <h1> <%= profile.name %></h1>
 
-  <section>
-    <ul>
       <% profile.answers.forEach(answer => { %>
         <% if ( answer.author.equals(profile._id)) { %>
           <li><%= answer.question.text %></li>
@@ -26,9 +24,6 @@
           <div class="input-group">
           <form id="update-form" action="/answers/<%= answer._id %>?_method=PUT" method="POST">
             <input
-              class="form-control"
-              placeholder="Recipient's username"
-              aria-label="Recipient's username with two button addons"
               type="text"
               name="text"
               value=" <%= answer.text %> "
@@ -46,8 +41,7 @@
         </div>
         <% } %>
       <% }) %>
-    </ul>
-  </section>
+
 </main>
 
 <%- include('../partials/footer') %>

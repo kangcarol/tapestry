@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-color: rgb(163, 21, 0);
+  background-color: rgb(41, 41, 45);
   color: #f6f6f6;
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -22,11 +22,11 @@ body {
 }
 
 nav {
-  background-color: black;
+  background-color: rgb(108, 24, 1);
   color: white;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 5px;
   min-height: 40px;
 }
@@ -55,7 +55,7 @@ h3 {
 ul {
   list-style-type: none;
 }
-
+`
 div {
   border: black solid 2px;
 }
@@ -74,6 +74,7 @@ section {
 
 a {
   color: white;
+  text-decoration: none;
 }
 
 pre {
@@ -87,6 +88,10 @@ nav > a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+nav > a:hover {
+  color:  rgb(228, 58, 0);
 }
 
 .btn {
@@ -113,15 +118,12 @@ nav > a {
   padding: 10px 0 10px 0;
 }
 
-nav > div:last-child {
-  margin-left: auto;
-}
-
 .avatar-name-div {
   padding: 5px 0 5px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
 
 #avatar {
