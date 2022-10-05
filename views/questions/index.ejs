@@ -1,7 +1,7 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<section>
+<main>
   <h1>Questions</h1>
   <h2>Click on a question to answer</h2>
 
@@ -13,12 +13,12 @@
           <form action="/answers" method="POST">
             <input type="text" name="text" autocomplete="off">
             <input name="question" value="<%= question._id %>" type="hidden">
-            <button type="submit">Save Answer</button>
+            <button type="submit" class="btn btn-secondary btn-sm">Save Answer</button>
           </form>
         <% } %>
         </details>
     <% }) %>
   </ul>
-</section>
+</main>
 
 <%- include('../partials/footer') %>

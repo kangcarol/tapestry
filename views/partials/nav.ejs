@@ -5,18 +5,19 @@
 <body>
 <nav>
   <a href="/">
-    <img src="/images/tapestry-logo.png" width="45px" height="45px">
+    TAPESTRY
+    <!-- <img src="/images/tapestry-logo.png" width="45px" height="45px"> -->
   </a>
-  <a href="/about">About</a>
-  <a href="/answers">Browse</a>
-  <a href="/questions">Share your experiences</a>
-  <a href="/profiles">Get to know someone</a>
+  <a href="/about">about</a>
+  <a href="/answers">all</a>
+  <a href="/questions">share your experiences</a>
+  <a href="/profiles">get to know someone</a>
 
   <% if (user) { %>
     <% if (user.profile.admin) { %>
-      <a href="/questions/new">Admin</a>
+      <a href="/questions/new">admin</a>
       <% } %>
-      <a href="/auth/logout">Log Out</a>
+      <a href="/auth/logout">log out</a>
     <a href="/profiles/<%= user.profile._id %>">
       <% if (user?.profile.avatar) { %>
         <div >

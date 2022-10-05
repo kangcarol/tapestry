@@ -6,29 +6,31 @@
 
   <form id="add-question-form" action="/questions" method="POST">
     <input type="text" name="text" id="text-input">
-    <button class="btn btn-secondary" type="submit">Add a Question</button>
+    <button type="submit" class="btn btn-secondary btn-sm">Add a Question</button>
   </form>
 
     <ul>
-      <% questions.forEach(function(question) { %>
-        <li id="question-line"><%= question.text %></li>
-        <form
-        action="/questions/<%= question._id %>?_method=PUT" method="POST"
-        >
-        <input
-        type="text"
-        name="text"
-        value=" <%= question.text %> "
-        autocomplete="off"
-        >
-        <button type="submit">update</button>
-      </form>
+      <% questions.slice().reverse().forEach(function(question) { %>
+        <div id="new-question">
+          <li id="question-line"><%= question.text %></li>
+          <form
+            action="/questions/<%= question._id %>?_method=PUT" method="POST"
+            >
+            <input
+            type="text"
+            name="text"
+            value=" <%= question.text %> "
+            autocomplete="off"
+            >
+            <button type="submit" class="btn btn-secondary btn-sm">update</button>
+          </form>
+      </div>
       <!-- <form
         action="/questions/<#%= question._id %>?_method=DELETE"
         method="POST"
         style="display: inline-block;"
         >
-        <button type="submit">delete</button>
+        <button type="submit" class="btn btn-secondary btn-sm">delete</button>
       </form> -->
       <% }) %>
     </ul>

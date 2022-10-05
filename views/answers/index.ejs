@@ -2,33 +2,32 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/answers.css">
 <%- include('../partials/nav') %>
+<main>
+  <section>
+    <% answers.slice().reverse().forEach(answer => { %>
+      <div id="primary-qa-div">
 
-<section>
+        <div class="avatar-name-div">
+          <img id="avatar"
+            src="<%= answer.author.avatar %>"
+            alt="<%= answer.author.name %> avatar"
+          />
+          <%= answer.author.name %>
+          </div>
 
-  <% answers.forEach(answer => { %>
-    <div id="primary-qa-div">
-      
-      <div class="avatar-name-div">
-        <img id="avatar"
-          src="<%= answer.author.avatar %>"
-          alt="<%= answer.author.name %> avatar"
-        />
-        <%= answer.author.name %>
+          <div id="qa-div">
+            <p id="question">
+              <%= answer.question.text %>
+            </p>
+            <p id="answer">
+              <%= answer.text %>
+            </p>
+          </div>
+
         </div>
-
-        <div id="qa-div">
-          <p id="question">
-            <%= answer.question.text %>
-          </p>
-          <p id="answer">
-            <%= answer.text %>
-          </p>
-        </div>
-
       </div>
-    </div>
-  <% }) %>
-
-</section>
+    <% }) %>
+  </section>
+</main>
 
 <%- include('../partials/footer') %>
