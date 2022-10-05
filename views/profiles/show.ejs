@@ -17,6 +17,11 @@
       <% if (answer.author.equals(profile._id)) { %>
         <p><%= answer.question.text %></p>
         <p><%= answer.text %></p>
+        <ul>
+          <% answer.comments.slice().reverse().forEach(function(comment) { %>
+              <li><%= comment.commenter %>: <%= comment.text %></li>
+          <% }) %>
+        </ul>
       <% } %>
       <% if (answer.author.equals(user?.profile._id)) { %>
         <div class="input-group">

@@ -21,7 +21,6 @@
             <p id="answer">
               <%= answer.text %>
             </p>
-            <!-- ---------ICE BOX------------ -->
             <ul>
               <% answer.comments.slice().reverse().forEach(function(comment) { %>
                   <li><%= comment.commenter %>: <%= comment.text %></li>
