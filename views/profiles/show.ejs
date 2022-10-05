@@ -23,6 +23,17 @@
           <% }) %>
         </ul>
       <% } %>
+      <details>
+        <summary>add a comment</summary>
+        <form
+          id="add-comment-form"
+          action="/answers/<%= answer._id %>/comments"
+          method="POST"
+        >
+          <input name="text">
+          <button type="submit">Add Comment</button>
+        </form>
+      </details>
       <% if (answer.author.equals(user?.profile._id)) { %>
         <div class="input-group">
         <form id="update-form" action="/answers/<%= answer._id %>?_method=PUT" method="POST">

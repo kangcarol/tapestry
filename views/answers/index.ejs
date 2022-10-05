@@ -26,14 +26,17 @@
                   <li><%= comment.commenter %>: <%= comment.text %></li>
               <% }) %>
             </ul>
-            <form
-              id="add-comment-form"
-              action="/answers/<%= answer._id %>/comments"
-              method="POST"
-            >
-            <input name="text">
-            <button type="submit">Add Comment</button>
-            </form>
+            <details>
+              <summary>add a comment</summary>
+              <form
+                id="add-comment-form"
+                action="/answers/<%= answer._id %>/comments"
+                method="POST"
+              >
+                <input name="text">
+                <button type="submit">Add Comment</button>
+              </form>
+            </details>
           </div>
 
         </div>
