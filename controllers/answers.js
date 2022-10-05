@@ -10,7 +10,7 @@ function index(req, res) {
     console.log('answers', answers)
     res.render('answers/index', {
       answers,
-      title: "ANSWERS FEED"
+      title: "Browse"
     })
   })
   .catch(err => {

@@ -1,0 +1,15 @@
+.qa-div {
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+#primary-qa-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+p {
+  margin: 0;
+}
