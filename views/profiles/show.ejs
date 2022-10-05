@@ -3,45 +3,45 @@
 
 <main>
 
-  <% if (profile.avatar) { %>
-    <div class="avatar-name-div">
-      <img id="avatar"
-      src="<%= profile.avatar %>"
-      alt="<%= profile.name %> avatar"
-      />
-    </div>
-    <% } %>
-  <h1> <%= profile.name %></h1>
-
-      <% profile.answers.forEach(answer => { %>
-        <% if ( answer.author.equals(profile._id)) { %>
-          <li><%= answer.question.text %></li>
-        <% } %>
-        <% if (answer.author === user.profile._id) { %>
-          <li><%= answer.text %></li>
-        <% } %>
-        <% if (answer.author.equals(user?.profile._id)) { %>
-          <div class="input-group">
-          <form id="update-form" action="/answers/<%= answer._id %>?_method=PUT" method="POST">
-            <input
-              type="text"
-              name="text"
-              value=" <%= answer.text %> "
-              autocomplete="off"
-            >
-            <button class="btn btn-outline-secondary" type="submit">update</button>
-          </form>
-          <form
-            action="/answers/<%= answer._id %>?_method=DELETE"
-            method="POST"
-            style="display: inline-block;"
+    <% if (profile.avatar) { %>
+      <div class="avatar-name-div">
+        <img id="avatar"
+        src="<%= profile.avatar %>"
+        alt="<%= profile.name %> avatar"
+        />
+      </div>
+      <% } %>
+    <h1> <%= profile.name %></h1>
+  <section>
+    <% profile.answers.forEach(answer => { %>
+      <% if ( answer.author.equals(profile._id)) { %>
+        <li><%= answer.question.text %></li>
+      <% } %>
+      <% if (answer.author === user.profile._id) { %>
+        <li><%= answer.text %></li>
+      <% } %>
+      <% if (answer.author.equals(user?.profile._id)) { %>
+        <div class="input-group">
+        <form id="update-form" action="/answers/<%= answer._id %>?_method=PUT" method="POST">
+          <input
+            type="text"
+            name="text"
+            value=" <%= answer.text %> "
+            autocomplete="off"
           >
-            <button class="btn btn-outline-secondary" type="submit">delete</button>
-          </form>
-        </div>
-        <% } %>
-      <% }) %>
-
+          <button class="btn btn-secondary btn-sm" type="submit">update</button>
+        </form>
+        <form
+          action="/answers/<%= answer._id %>?_method=DELETE"
+          method="POST"
+          style="display: inline-block;"
+        >
+          <button class="btn btn-secondary btn-sm" type="submit">delete</button>
+        </form>
+      </div>
+      <% } %>
+    <% }) %>
+</section>
 </main>
 
 <%- include('../partials/footer') %>

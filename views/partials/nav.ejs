@@ -9,26 +9,25 @@
     <!-- <img src="/images/tapestry-logo.png" width="45px" height="45px"> -->
   </a>
   <a href="/about">about</a>
-  <a href="/answers">all</a>
-  <a href="/questions">share your experiences</a>
-  <a href="/profiles">get to know someone</a>
 
   <% if (user) { %>
-    <% if (user.profile.admin) { %>
-      <a href="/questions/new">admin</a>
+    <a href="/profiles/<%= user.profile._id %>"></a>
+    <% if (user?.profile.avatar) { %>
+      <a href="/answers">all</a>
+      <a href="/questions">share your experiences</a>
+      <a href="/profiles">get to know someone</a>
       <% } %>
       <a href="/auth/logout">log out</a>
-    <a href="/profiles/<%= user.profile._id %>">
-      <% if (user?.profile.avatar) { %>
-        <div >
-          <img id="avatar"
-            src="<%= user.profile.avatar %>"
-            alt="<%= user.profile.name %> avatar"
-            height="45px"
-            width="45px"
-          />
-        </div>
-    </a>
-    <% } %>
+      <% if (user.profile.admin) { %>
+        <a href="/questions/new">admin</a>
+      <% } %>
+      <div >
+        <img id="avatar"
+        src="<%= user.profile.avatar %>"
+        alt="<%= user.profile.name %> avatar"
+        height="40px"
+        width="40px"
+        />
+      </div>
   <% } %>
 </nav>

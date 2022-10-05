@@ -75,10 +75,31 @@ function update(req, res) {
     res.redirect('/profiles')
   })
 }
+// ---------ICE BOX------------
+function createComment(req, res) {
+  console.log(req.body, "req.body")
+  Answer.findById(req.params.id)
+  .then(answer => {
+    answer.comments.push(req.body)
+    answer.save()
+    .then(() => {
+      res.redirect(`/answers`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
 
 export {
   index,
   create,
   deleteAnswer,
   update,
+  createComment //ICE BOX
 }

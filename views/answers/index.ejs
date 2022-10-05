@@ -6,7 +6,6 @@
   <section>
     <% answers.slice().reverse().forEach(answer => { %>
       <div id="primary-qa-div">
-
         <div class="avatar-name-div">
           <img id="avatar"
             src="<%= answer.author.avatar %>"
@@ -22,6 +21,20 @@
             <p id="answer">
               <%= answer.text %>
             </p>
+            <!-- ---------ICE BOX------------ -->
+            <ul>
+              <% answer.comments.forEach(function(comment) { %>
+                  <li><%= comment.text %></li>
+              <% }) %>
+            </ul>
+            <form
+              id="add-comment-form"
+              action="/answers/<%= answer._id %>/comments"
+              method="POST"
+            >
+            <input name="text">
+            <button type="submit">Add Comment</button>
+            </form>
           </div>
 
         </div>
