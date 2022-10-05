@@ -3,8 +3,7 @@
 
 <main>
   <section>
-    <h1>Questions</h1>
-    <h3>Click on a question to answer</h3>
+    <h1 id="click-question">share your experiences</h1>
     <ul>
       <% questions.forEach(question => { %>
         <details>
@@ -13,7 +12,7 @@
             <form action="/answers" method="POST">
               <input type="text" name="text" autocomplete="off">
               <input name="question" value="<%= question._id %>" type="hidden">
-              <button type="submit" class="btn btn-secondary btn-sm">Save Answer</button>
+              <button type="submit" class="btn btn-secondary btn-sm">save answer</button>
             </form>
           <% } %>
           </details>

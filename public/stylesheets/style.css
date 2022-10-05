@@ -42,6 +42,10 @@ main {
 
 section {
   width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
 
 h1 {
@@ -65,7 +69,7 @@ ul {
   list-style-type: none;
   padding: 0;
   color: gray;
-  margin: 0 5px 10px 30px;
+  margin: 0 5px 10px 0px;
 }
 
 div {
@@ -78,12 +82,16 @@ input, summary, details {
   font-size: 14px;
 }
 
+input {
+  max-height: 25px;
+}
+
 details {
-  padding: 0 20px 10px 20px;
+  padding: 0 20px 0px 20px;
 }
 
 summary {
-  padding:  0 0px 10px 0px;
+
 }
 
 p, label, li, button, summary, details {
@@ -123,6 +131,10 @@ nav > a:hover {
   color:  rgb(228, 58, 0);
 }
 
+nav > a:active {
+  color:  rgb(228, 58, 0);
+}
+
 .btn {
   margin: 16px 0;
 }
@@ -149,7 +161,11 @@ nav > a:hover {
 }
 
 .about-text {
-  padding: 10px 0 10px 0;
+  padding: 30px 0 10px 0;
+}
+
+#dad-profile {
+  color: lightblue;
 }
 
 .avatar-name-div {
@@ -162,13 +178,19 @@ nav > a:hover {
   max-width: 165px;
 }
 
+.tapestry-header {
+  padding: 60px 0 0 0;
+  font-size: 85px;
+}
+
 #nav-avatar-div {
   padding: 0 40px 0 0;
 }
 
 #avatar {
   border-radius: 50%;
-  padding: 0 0 10px 0;
+  max-width: 125px;
+  align-items: center;
 }
 
 #tapestry-logo-div {
@@ -179,11 +201,6 @@ nav > a:hover {
 
 #tapestry-logo {
   padding: 0 6px 0 0;
-}
-
-#tapestry-header {
-  padding: 60px 0 0 0;
-  font-size: 85px;
 }
 
 #sdoc {
@@ -204,6 +221,44 @@ nav > a:hover {
   padding: 10px 0 15px 0;
 }
 
-#dad-profile {
+.qa-div {
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.question {
+  font-weight: 500px;
+}
+
+summary:hover {
+  color:  rgb(228, 58, 0);
+}
+
+.answer {
   color: lightblue;
+}
+
+#primary-qa-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 15px 0 30px 0;
+}
+
+#profile-avatar-name-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  max-width: 300px;
+}
+
+p {
+  margin: 0 5px 10px 30px;
+}
+
+#click-question {
+  padding: 15px 0 30px 0;
 }

@@ -1,6 +1,5 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/answers.css">
 <%- include('../partials/nav') %>
 <main>
   <section>
@@ -15,10 +14,10 @@
           </div>
 
           <div id="qa-div">
-            <p id="question">
+            <p class="question">
               <%= answer.question.text %>
             </p>
-            <p id="answer">
+            <p class="answer">
               <%= answer.text %>
             </p>
             <ul>
