@@ -2,12 +2,13 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= title %></h1>
+  <section>
+    <h1><%= title %></h1>
 
-  <form id="add-question-form" action="/questions" method="POST">
-    <input type="text" name="text" id="text-input">
-    <button type="submit" class="btn btn-secondary btn-sm">Add a Question</button>
-  </form>
+    <form id="add-question-form" action="/questions" method="POST">
+      <input type="text" name="text" id="text-input">
+      <button type="submit" class="btn btn-warning btn-sm">Add a Question</button>
+    </form>
 
     <ul>
       <% questions.slice().reverse().forEach(function(question) { %>
@@ -34,7 +35,7 @@
       </form> -->
       <% }) %>
     </ul>
-
+  </section>
 </main>
 
 <%- include('../partials/footer') %>

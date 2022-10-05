@@ -27,7 +27,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px;
+  padding: 0 0 5px 0;
   min-height: 40px;
 }
 
@@ -37,50 +37,60 @@ main {
   justify-content: center;
   flex-direction: column;
   margin: 100px 0 30px 0;
+  padding: 10px 0 0 0;
+}
+
+section {
+  width: 60%;
+
 }
 
 h1 {
   font-size: 32px;
-  padding: 10px 0 0 0;
+  padding: 10px 0 30px 0;
+  text-align: center;
 }
 
 h2 {
   font-size: 30px;
+  text-align: center;
 }
 
 h3 {
   font-size: 24px;
+  text-align: center;
+  padding: 10px 0 10px 0;
 }
 
 ul {
   list-style-type: none;
-  padding: none;
+  padding: 0;
 }
 
 div {
   border: black solid 2px;
 }
 
-details {
-  padding: 10px 0 10px 0;
+input, summary, details {
+  width: 500px;
+  color: gray;
+  font-size: 14px;
 }
 
-p, label, li, button {
+details {
+  padding: 10px 20px 10px 20px;
+}
+
+summary {
+  padding:  0 20px 10px 20px;
+}
+
+p, label, li, button, summary, details {
   font-size: 18px;
 }
 
 label {
   font-weight: bold;
-}
-
-section {
-  width: 80%;
-}
-
-input {
-  width: 500px;
-  color: gray;
-  font-size: 14px;
 }
 
 a {
@@ -94,7 +104,7 @@ pre {
 }
 
 nav > a {
-  margin: 10px 30px;
+  margin: 10px 20px;
   text-decoration: none;
   font-size: 20px;
   display: flex;
@@ -121,6 +131,11 @@ nav > a:hover {
   display: inline-block;
 }
 
+.navbar-brand{
+  color: white;
+  padding: 0 5px 0 5px;
+}
+
 .profile-avatar {
   margin-top: 50px;
 }
@@ -136,22 +151,40 @@ nav > a:hover {
 }
 
 .avatar-name-div {
-  padding: 0px 10px 15px 10px;
+  padding: 0px 10px 0px 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-self: flex-start;
   text-align: center;
   max-width: 125px;
 }
 
+#nav-avatar-div {
+  padding: 0 40px 0 0;
+}
+
 #avatar {
   border-radius: 50%;
-  margin: 0 0 0 10px;
+}
+
+#tapestry-logo-div {
+  display: flex;
+  vertical-align: center;
+  padding: 0 0 0 40px;
 }
 
 #tapestry-logo {
+  padding: 0 6px 0 0;
+}
+
+#tapestry-header {
+  padding: 60px 0 0 0;
   font-size: 85px;
-  /* padding: 80px 0 2px 0; */
+}
+
+#sdoc {
+  text-align: center;
 }
 
 #google-login {

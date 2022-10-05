@@ -2,23 +2,24 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1>Questions</h1>
-  <h2>Click on a question to answer</h2>
-
-  <ul>
-    <% questions.forEach(question => { %>
-      <details>
-        <summary><%= question.text %></a></summary>
-        <% if (user) { %>
-          <form action="/answers" method="POST">
-            <input type="text" name="text" autocomplete="off">
-            <input name="question" value="<%= question._id %>" type="hidden">
-            <button type="submit" class="btn btn-secondary btn-sm">Save Answer</button>
-          </form>
-        <% } %>
-        </details>
-    <% }) %>
-  </ul>
+  <section>
+    <h1>Questions</h1>
+    <h3>Click on a question to answer</h3>
+    <ul>
+      <% questions.forEach(question => { %>
+        <details>
+          <summary><%= question.text %></a></summary>
+          <% if (user) { %>
+            <form action="/answers" method="POST">
+              <input type="text" name="text" autocomplete="off">
+              <input name="question" value="<%= question._id %>" type="hidden">
+              <button type="submit" class="btn btn-secondary btn-sm">Save Answer</button>
+            </form>
+          <% } %>
+          </details>
+      <% }) %>
+    </ul>
+  </section>
 </main>
 
 <%- include('../partials/footer') %>

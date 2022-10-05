@@ -19,7 +19,7 @@ function newQuestion(req, res) {
   Question.find({})
   .then(questions => {
     res.render('questions/new', {
-      title: 'Add Question',
+      title: 'Add a Question to Your Profile',
       questions,
     })
   })
