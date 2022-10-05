@@ -14,11 +14,9 @@
     <h1> <%= profile.name %></h1>
   <section>
     <% profile.answers.forEach(answer => { %>
-      <% if ( answer.author.equals(profile._id)) { %>
-        <li><%= answer.question.text %></li>
-      <% } %>
-      <% if (answer.author !== user.profile._id) { %>
-        <li><%= answer.text %></li>
+      <% if (answer.author.equals(profile._id)) { %>
+        <p><%= answer.question.text %></p>
+        <p><%= answer.text %></p>
       <% } %>
       <% if (answer.author.equals(user?.profile._id)) { %>
         <div class="input-group">

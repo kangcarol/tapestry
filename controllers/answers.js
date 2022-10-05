@@ -68,7 +68,7 @@ function update(req, res) {
   Answer.findByIdAndUpdate(req.params.id, req.body, {new: true})
   .then(answer => {
     console.log(req.body,'updated answer?')
-    res.redirect(`/answers`)
+    res.redirect(`/profiles/${req.user.profile._id}`)
   })
   .catch(err => {
     console.log(err)
