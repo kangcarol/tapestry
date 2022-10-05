@@ -23,8 +23,8 @@
             </p>
             <!-- ---------ICE BOX------------ -->
             <ul>
-              <% answer.comments.forEach(function(comment) { %>
-                  <li><%= comment.text %></li>
+              <% answer.comments.slice().reverse().forEach(function(comment) { %>
+                  <li><%= comment.commenter %>: <%= comment.text %></li>
               <% }) %>
             </ul>
             <form
