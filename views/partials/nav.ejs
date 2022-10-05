@@ -11,7 +11,6 @@
   <a href="/about">about</a>
 
   <% if (user) { %>
-    <a href="/profiles/<%= user.profile._id %>"></a>
     <% if (user?.profile.avatar) { %>
       <a href="/answers">all</a>
       <a href="/questions">share your experiences</a>
@@ -20,14 +19,16 @@
       <a href="/auth/logout">log out</a>
       <% if (user.profile.admin) { %>
         <a href="/questions/new">admin</a>
-      <% } %>
-      <div >
-        <img id="avatar"
-        src="<%= user.profile.avatar %>"
-        alt="<%= user.profile.name %> avatar"
-        height="40px"
-        width="40px"
-        />
+        <% } %>
+        <div >
+          <a href="/profiles/<%= user.profile._id %>">
+            <img id="avatar"
+              src="<%= user.profile.avatar %>"
+              alt="<%= user.profile.name %> avatar"
+              height="40px"
+              width="40px"
+            />
+          </a>
       </div>
   <% } %>
 </nav>

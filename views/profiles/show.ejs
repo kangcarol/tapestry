@@ -17,7 +17,7 @@
       <% if ( answer.author.equals(profile._id)) { %>
         <li><%= answer.question.text %></li>
       <% } %>
-      <% if (answer.author === user.profile._id) { %>
+      <% if (answer.author !== user.profile._id) { %>
         <li><%= answer.text %></li>
       <% } %>
       <% if (answer.author.equals(user?.profile._id)) { %>
