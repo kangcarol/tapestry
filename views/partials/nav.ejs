@@ -3,7 +3,7 @@
 <% } %>
 </head>
 <body>
-<nav class="navbar fixed-top">
+<nav>
   <a href="/">
     TAPESTRY
     <!-- <img src="/images/tapestry-logo.png" width="45px" height="45px"> -->
@@ -21,14 +21,13 @@
         <a href="/questions/new">admin</a>
         <% } %>
         <div >
-          <a href="/profiles/<%= user.profile._id %>">
-            <img id="avatar"
-              src="<%= user.profile.avatar %>"
-              alt="<%= user.profile.name %> avatar"
-              height="40px"
-              width="40px"
-            />
-          </a>
+          <a href="/profiles/<%= user.profile._id %>"> 
+          <img id="avatar"
+            src="<%= user.profile.avatar %>"
+            alt="<%= user.profile.name %> avatar"
+            height="40px"
+            width="40px"
+        />
       </div>
   <% } %>
 </nav>
