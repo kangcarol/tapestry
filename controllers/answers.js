@@ -75,7 +75,7 @@ function update(req, res) {
     res.redirect('/profiles')
   })
 }
-// ---------ICE BOX------------
+
 function createComment(req, res) {
   console.log(req.body, "req.body")
   Answer.findById(req.params.id)
@@ -101,5 +101,5 @@ export {
   create,
   deleteAnswer,
   update,
-  createComment //ICE BOX
+  createComment
 }
