@@ -32,7 +32,7 @@
 <br>
 
  ## Technologies Used
-Mongoose, MongoDB, Express, Node, JavaScript (and embedded in HTML), CSS, Git, Bootstrap, Trello, Whimsical<br>
+Mongoose, MongoDB, Express, Node, JavaScript (and embedded in HTML), CSS, Git, Bootstrap, Trello, Whimsical, Fly.io<br>
 <br>
 
  ## Credits
