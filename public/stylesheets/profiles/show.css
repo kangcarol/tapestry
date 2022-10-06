@@ -1,18 +1,12 @@
 section {
-  /* width: 60%; */
   height: 100vh;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: black; */
+  min-width: 40%;
+  max-width: 60%;
 }
-
 
 .profile-avatar {
   margin-top: 50px;
 }
-
 
 #profile-qa-div {
   display: flex;

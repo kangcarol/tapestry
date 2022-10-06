@@ -13,7 +13,7 @@
         <% } %>
       <h1 id="avatar-name"> <%= profile.name %></h1>
     </div>
-    <% profile.answers.forEach(answer => { %>
+    <% profile.answers.slice().reverse().forEach(answer => { %>
       <% if (answer.author.equals(profile._id)) { %>
       <div id="profile-qa-div">
         <p class="question"><%= answer.question.text %></p>

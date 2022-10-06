@@ -6,7 +6,7 @@ function index(req, res) {
   .then(questions => {
     res.render('questions/index', {
       questions,
-      title: "Questions"
+      title: "questions"
     })
   })
   .catch(err => {
@@ -19,7 +19,7 @@ function newQuestion(req, res) {
   Question.find({})
   .then(questions => {
     res.render('questions/new', {
-      title: 'Add a Question to Your Profile',
+      title: 'create a question',
       questions,
     })
   })
@@ -40,6 +40,7 @@ function create(req, res) {
   })
 }
 
+// -----------ICEBOX - Work in Progress---(need to delete for user, answers also)------
 // function deleteQuestion(req, res) {
 //   Question.findById(req.params.id)
 //   .then(question => {
@@ -69,5 +70,5 @@ export {
   newQuestion as new,
   create,
   update,
-  // deleteQuestion
+  // deleteQuestion ---ICEBOX---
 }

@@ -6,8 +6,7 @@
 <nav class="navbar fixed-top">
   <div id="tapestry-logo-div">
     <a class="navbar-brand" href="/">
-      <img id="tapestry-logo" src="/images/tapestry-logo.png" width="35px" height="35px" class="d-inline-block align-top" alt="tapestry-logo">
-      APESTRY
+      <img id="tapestry-logo" src="/images/tapestry-nav-logo.png"   class="d-inline-block align-top" alt="tapestry-logo">
     </a>
   </div>
 
@@ -23,13 +22,13 @@
       <% if (user.profile.admin) { %>
         <a href="/questions/new">admin</a>
         <% } %>
-        <div id="nav-avatar">
+        <div id="nav-avatar-div">
           <a href="/profiles/<%= user.profile._id %>">
-          <img id="avatar"
+          <img id="nav-avatar"
             src="<%= user.profile.avatar %>"
             alt="<%= user.profile.name %> avatar"
-            height="40px"
-            width="40px"
+            height="38px"
+            width="38px"
         /> </a>
       </div>
   <% } %>
