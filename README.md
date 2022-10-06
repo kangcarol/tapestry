@@ -7,6 +7,15 @@
  <br>
  Tapestry is an app designed for contemplation, genuine interactions and learn about others.<br>
 
+1. AAU Admin, I am the only one who will be able to add/update questions.
+2. AAU I want to login/logout to access my Q&As to answer/edit/update, and to read other's Q&As.
+3. AAU after logging in, I want to view the latest Q&As answered (a feed).
+4. AAU if I want to go back to my feed I can click TAPESTRY on the nav bar.
+5. AAU I want to see all my Q&As on one page, and be able to edit or delete.
+6. AAU I want my cards to be accessible to READ ONLY by other users. (I want to read other people's Q&A but I shouldn't be able to do anything more than that.)
+
+*note: trying to avoid the things I don't like about social media, such as "likes" which I think spurs on insincerity online.
+
 
 ![image](public/tapestry.png)
 
