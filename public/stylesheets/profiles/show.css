@@ -1,6 +1,6 @@
 section {
-  height: 100%;
-  width: 60%;
+  height: 100vh;
+  width: 50%;
 }
 
 .profile-avatar {
@@ -34,5 +34,5 @@ summary {
 }
 
 input {
-  
+
 }
