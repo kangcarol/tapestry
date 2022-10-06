@@ -36,8 +36,7 @@ main {
 }
 
 section {
-  max-width: 55%;
-  /* min-width: 50%; */
+  width: 55%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -83,27 +82,35 @@ ul {
 }
 
 input, summary, details {
-  width: 400px;
+  /* width: 350px; */
   color: rgb(230, 227, 211);
-  font-size: 16px;
+  font-size: 14px;
+  padding: 0 0 0 30px;
+}
+
+details, summary {
+  width: 500px;
+  font-size: 18px;
+  margin: 0 5px 10px 5px;
 }
 
 input {
   height: 25px;
-  color: black;
-  margin: 0 20px;
-}
-
-
-details, summary {
   width: 500px;
-  color:  rgb(230, 227, 211);
-  font-size: 14px;
+  color: black;
+  margin: 0 10px;
+  padding: 0 0 0 30px;
 }
 
-summary, details {
+span {
+  width: 10px;
+}
+
+#summary-share {
+  width: 500px;
+  color: rgb(230, 227, 211);
   font-size: 18px;
-  margin: 0 5px 10px 5px;
+  padding: 0 0 0 10px;
 }
 
 ul, li {
@@ -115,6 +122,7 @@ ul, li {
 p {
   font-size: 18px;
   margin: 0 5px 10px 30px;
+  padding: 0 0 0 10px;
   color:  rgb(237, 220, 122);
 }
 
@@ -201,14 +209,18 @@ nav > a:active {
 .question {
   font-weight: 500px;
   color: rgb(249, 207, 56);
+  padding: 0 0 0 10px;
 }
 
 .answer {
   color:  rgb(0, 151, 80);
+  padding: 0 0 0 10px;
 }
 
 .comment-li {
-  list-style-type: circle;
+  /* list-style-type: circle; */
+  padding: 0 0 0 20px;
+  color: rgb(230, 227, 211);
 }
 
 summary:hover {
@@ -216,7 +228,7 @@ summary:hover {
 }
 
 .avatar-name-div {
-  padding: 15px;
+  padding: 0 15px 15px 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
