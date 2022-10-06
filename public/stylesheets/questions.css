@@ -1,8 +1,7 @@
 input, summary, details {
-  /* width: 350px; */
   color: rgb(230, 227, 211);
   font-size: 14px;
-  /* padding: 0 0 0 10px; */
+  word-wrap: break-word;
 }
 
 details, summary {

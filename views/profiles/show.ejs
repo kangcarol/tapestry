@@ -36,7 +36,8 @@
           method="POST"
         >
           <input name="text">
-          <button id="delete-btn" type="submit" class="btn btn-warning btn-sm">add</button>
+          <span></span>
+          <button type="submit" class="btn btn-warning btn-sm">add</button>
         </form>
       </div>
       </details>
@@ -51,10 +52,11 @@
               value=" <%= answer.text %> "
               autocomplete="off"
             >
+            <span></span>
             <button class="btn btn-success btn-sm" type="submit">update</button>
           </form>
-          <span></span>
-          <form
+          <!-- <span></span> -->
+          <form id="delete-form"
             action="/answers/<%= answer._id %>?_method=DELETE"
             method="POST"
             style="display: inline-block;"

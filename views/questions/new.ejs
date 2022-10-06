@@ -9,6 +9,7 @@
     <div class="new-question">
       <form action="/questions" method="POST">
         <input type="text" name="text">
+        <span></span>
         <button type="submit" class="btn btn-warning btn-sm">add</button>
       </form>
     </div>
@@ -25,6 +26,7 @@
             value=" <%= question.text %> "
             autocomplete="off"
             >
+            <span></span>
             <button type="submit" class="btn btn-success btn-sm">update</button>
           </form>
       </div>
