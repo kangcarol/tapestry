@@ -7,8 +7,8 @@
  <br>
  Tapestry is an app designed for contemplation, genuine interactions and learn about others.<br>
 
-<br>
- ![screenshot](public/images/tapestry-screenshot.png)
+
+![image](public/tapestry.png)
 
 <br>
 
