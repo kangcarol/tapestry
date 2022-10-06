@@ -1,6 +1,4 @@
-# Choose Your Own Adventure : The Phoenix
-![screenshot](insert screenshot path)
-
+# TAPESTRY
 
  ## Description
  **"We don't accomplish anything in this life alone...and whatever happens is the result of the whole tapestry of one's life and all the weavings of individual threads from one to another that creates something." - Sandra Day O'Connor**<br>
@@ -10,8 +8,11 @@
  Tapestry is an app designed for contemplation, genuine interactions and learn about others.<br>
 
 <br>
+[screenshot](/public/images/tapestry-screenshot.png)
 
- ## Get started [here](carolkang-tapestry-app.fly.dev) <br>
+<br>
+
+ ## Get started [here](https://carolkang-tapestry-app.fly.dev/) <br>
 <br>
 
  ## Planning
