@@ -20,6 +20,9 @@
             <p class="answer">
               <%= answer.text %>
             </p>
+            <% if (answer.comments.length > 0) { %>
+              <p>comments:</p>
+            <% } %>
             <ul>
               <% answer.comments.slice().reverse().forEach(function(comment) { %>
                   <li><%= comment.commenter %>: <%= comment.text %></li>
@@ -33,7 +36,7 @@
                 method="POST"
               >
                 <input name="text">
-                <button type="submit" class="btn btn-secondary btn-sm">Add Comment</button>
+                <button type="submit" class="btn btn-secondary btn-sm">add</button>
               </form>
             </details>
           </div>

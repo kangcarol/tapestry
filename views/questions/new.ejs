@@ -5,15 +5,16 @@
   <section>
     <h1><%= title %></h1>
 
-    <form id="add-question-form" action="/questions" method="POST">
-      <input type="text" name="text" id="text-input">
-      <button type="submit" class="btn btn-warning btn-sm">Add a Question</button>
-    </form>
+    <div class="new-question">
+      <form action="/questions" method="POST">
+        <input type="text" name="text">
+        <button type="submit" class="btn btn-warning btn-sm">add a question</button>
+      </form>
+    </div>
 
-    <ul>
       <% questions.slice().reverse().forEach(function(question) { %>
-        <div id="new-question">
-          <li id="question-line"><%= question.text %></li>
+        <div class="new-question">
+          <p id="question-line"><%= question.text %></p>
           <form
             action="/questions/<%= question._id %>?_method=PUT" method="POST"
             >
@@ -34,7 +35,6 @@
         <button type="submit" class="btn btn-secondary btn-sm">delete</button>
       </form> -->
       <% }) %>
-    </ul>
   </section>
 </main>
 

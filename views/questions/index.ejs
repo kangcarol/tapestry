@@ -4,8 +4,8 @@
 <main>
   <section>
     <h1 id="click-question">share your experiences</h1>
-    <ul>
-      <% questions.forEach(question => { %>
+    <% questions.forEach(question => { %>
+      <div class="new-question">
         <details>
           <summary><%= question.text %></a></summary>
           <% if (user) { %>
@@ -15,9 +15,9 @@
               <button type="submit" class="btn btn-secondary btn-sm">save answer</button>
             </form>
           <% } %>
-          </details>
+        </details>
+      </div>
       <% }) %>
-    </ul>
   </section>
 </main>
 

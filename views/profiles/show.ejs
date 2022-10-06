@@ -14,8 +14,12 @@
     </div>
     <% profile.answers.forEach(answer => { %>
       <% if (answer.author.equals(profile._id)) { %>
+      <div id="profile-qa-div">
         <p class="question"><%= answer.question.text %></p>
         <p class="answer"><%= answer.text %></p>
+        <% if (answer.comments.length > 0) { %>
+          <p>comments:</p>
+        <% } %>
         <ul>
           <% answer.comments.slice().reverse().forEach(function(comment) { %>
               <li><%= comment.commenter %>: <%= comment.text %></li>
@@ -24,19 +28,22 @@
       <% } %>
       <details>
         <summary>add a comment</summary>
+        <div class="form-div">
         <form
           id="add-comment-form"
           action="/answers/<%= answer._id %>/comments"
           method="POST"
         >
           <input name="text">
-          <button type="submit" class="btn btn-secondary btn-sm">add comment</button>
+          <button type="submit" class="btn btn-secondary btn-sm">add</button>
         </form>
+      </div>
       </details>
       <% if (answer.author.equals(user?.profile._id)) { %>
         <details>
           <summary>update or delete question</summary>
-          <form id="update-form" action="/answers/<%= answer._id %>?_method=PUT" method="POST">
+          <form action="/answers/<%= answer._id %>?_method=PUT" method="POST">
+            <div class="form-div">
             <input
               type="text"
               name="text"
@@ -52,8 +59,10 @@
           >
             <button class="btn btn-secondary btn-sm" type="submit">delete</button>
           </form>
+        </div>
         </details>
       <% } %>
+    </div>
     <% }) %>
 </section>
 </main>
