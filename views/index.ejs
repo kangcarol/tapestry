@@ -2,41 +2,43 @@
 <%- include('./partials/nav') %>
 
 <main>
+  <!-- <div class="top"></div> -->
+  <div id="intro-container">
+    <div>
+      <h1 class="tapestry-header">TAPESTRY</h1>
+    </div>
 
-  <div>
-    <h1 class="tapestry-header">TAPESTRY</h1>
-  </div>
+    <h4>Share your experiences & learn about others</h4>
 
-  <h4>Share your experiences & learn about others</h4>
+    <div id="google-login">
+      <% if (user) { %>
+        <a href="/questions">
+          <h2></h2>
+        </a>
+      <% } else { %>
+        <div
+          id="g_id_onload"
+          data-client_id="<%= googleClientID %>"
+          data-login_uri="/auth/google"
+          data-auto_prompt="false"
+        ></div>
+        <div
+          class="g_id_signin"
+          data-type="standard"
+          data-size="large"
+          data-theme="outline"
+          data-text="sign_in_with"
+          data-shape="rectangular"
+          data-logo_alignment="left"
+        ></div>
+      <% } %>
+    </div>
 
-  <div id="google-login">
-    <% if (user) { %>
-      <a href="/questions">
-        <h2>Let's get started answering questions!</h2>
-      </a>
-    <% } else { %>
-      <div
-        id="g_id_onload"
-        data-client_id="<%= googleClientID %>"
-        data-login_uri="/auth/google"
-        data-auto_prompt="false"
-      ></div>
-      <div
-        class="g_id_signin"
-        data-type="standard"
-        data-size="large"
-        data-theme="outline"
-        data-text="sign_in_with"
-        data-shape="rectangular"
-        data-logo_alignment="left"
-      ></div>
-    <% } %>
-  </div>
-
-  <div class="intro-text">
-    <h3>"We don't accomplish anything in this life alone...and whatever happens is the result of the whole tapestry of one's life and all the weavings of individual threads from one to another that creates something." </h3>
-    <p id="sdoc">- Sandra Day O'Connor</p>
-  </div>
+    <div class="intro-text">
+      <h3>"We don't accomplish anything in this life alone...and whatever happens is the result of the whole tapestry of one's life and all the weavings of individual threads from one to another that creates something." </h3>
+      <p id="sdoc">- Sandra Day O'Connor</p>
+    </div>
+</div>
 
 </main>
 

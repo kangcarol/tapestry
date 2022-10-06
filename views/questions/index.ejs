@@ -3,8 +3,9 @@
 
 <main>
   <section>
+    <div class="top"></div>
     <h1 id="click-question">share your experiences</h1>
-    <% questions.forEach(question => { %>
+    <% questions.slice().reverse().forEach(question => { %>
       <div class="new-question">
         <details>
           <summary><%= question.text %></a></summary>
@@ -12,7 +13,7 @@
             <form action="/answers" method="POST">
               <input type="text" name="text" autocomplete="off">
               <input name="question" value="<%= question._id %>" type="hidden">
-              <button type="submit" class="btn btn-secondary btn-sm">save answer</button>
+              <button type="submit" class="btn btn-secondary btn-sm">save</button>
             </form>
           <% } %>
         </details>

@@ -1,8 +1,9 @@
 <%- include('../partials/html-head') %>
-<%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
+
 <main>
   <section>
+    <div class="top"></div>
     <% answers.slice().reverse().forEach(answer => { %>
       <div id="primary-qa-div">
         <div class="avatar-name-div">
@@ -25,7 +26,7 @@
             <% } %>
             <ul>
               <% answer.comments.slice().reverse().forEach(function(comment) { %>
-                  <li><%= comment.text %></li>
+                  <li class="comment-li"><%= comment.text %></li>
               <% }) %>
             </ul>
             <details>
