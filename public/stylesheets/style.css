@@ -14,7 +14,6 @@ html {
 body {
   background-color: black;
   background-image: url('/images/bh1.jpg');
-  color:  rgb(230, 227, 211);
   font-family: 'Poppins', sans-serif;
   margin: 0;
   height: 100vh;
@@ -38,7 +37,7 @@ main {
 }
 
 section {
-  width: 60%;
+  width: 50%;
   height: 100%  ;
   display: flex;
   flex-direction: column;
@@ -156,6 +155,11 @@ nav > a:active {
   color:   rgb(255, 0, 0);
 }
 
+.navbar-brand{
+  color:  rgb(230, 227, 211);
+  padding: 0 5px 0 5px;
+}
+
 .top {
   height: 100px;
 }
@@ -166,32 +170,6 @@ nav > a:active {
   width: 100%
 } */
 
-/* .link {
-  padding: 10px 0;
-  font-size: 18px;
-  display: inline-block;
-} */
-
-.navbar-brand{
-  color:  rgb(230, 227, 211);
-  padding: 0 5px 0 5px;
-}
-
-.intro-text {
-  font-size: 20px;
-  width: 58%;
-}
-
-.about-text {
-  padding: 30px 0 10px 0;
-  color: rgb(250, 246, 227);
-  margin: 0 10px 10px 10px;
-}
-
-#dad-profile, h4 {
-  color: rgb(249, 207, 56);
-}
-
 .form-div {
   padding: 0 10px;
   width: 600px;
@@ -201,7 +179,6 @@ nav > a:active {
   padding: 10px 0 30px 0;
   width: 600px;
 }
-
 
 .qa-div {
   display: flex;
@@ -223,19 +200,15 @@ summary:hover {
   color:  rgb(255, 0, 0);
 }
 
-.answer {
-  color:  rgb(230, 227, 211);
-}
-
-
 .avatar-name-div {
-  padding: 15px 15px 0px 15px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-self: flex-start;
   text-align: center;
   width: 150px;
+  color: white;
 }
 
 .tapestry-header {
@@ -250,10 +223,34 @@ summary:hover {
   justify-content: center;
   align-items: center;
   background-color: black;
-  max-width: 700px;
+  width: 50%;
   height: 100vh;
   padding: 100px 0 0 0;
   margin: 100px 50px 100 100px;
+}
+
+.intro-text {
+  font-size: 20px;
+  width: 58%;
+  color: rgb(250, 246, 227);
+}
+
+#sdoc {
+  text-align: center;
+  font-size: 16px;
+  color: rgb(250, 246, 227);
+  padding: 0;
+  margin: 0 15px;
+}
+
+.about-text {
+  padding: 30px 0 10px 0;
+  color: rgb(250, 246, 227);
+  margin: 0 10px 10px 10px;
+}
+
+#dad-profile, h4 {
+  color: rgb(249, 207, 56);
 }
 
 #nav-avatar {
@@ -277,14 +274,6 @@ summary:hover {
 
 #tapestry-logo {
   padding: 0 6px 0 0;
-}
-
-#sdoc {
-  text-align: center;
-  font-size: 16px;
-  color: rgb(250, 246, 227);
-  padding: 0;
-  margin: 0 15px;
 }
 
 #google-login {

@@ -5,7 +5,7 @@
 <br>
  Tapestry stems from a project that I started over the Pandemic with my dad. Realizing I had taken for granted the trips to visit my parents on the other side of the world, I started a correspondence with my dad to record his thoughts, advice and life experiences.<br>
  <br>
- Tapestry is an app designed for contemplation, genuine interactions and learn about others.<br>
+ Tapestry is an app designed for contemplation, genuine interactions and to learn about others.<br>
 
 1. AAU Admin, I am the only one who will be able to add/update questions.
 2. AAU I want to login/logout to access my Q&As to answer/edit/update, and to read other's Q&As.
@@ -14,10 +14,11 @@
 5. AAU I want to see all my Q&As on one page, and be able to edit or delete.
 6. AAU I want my cards to be accessible to READ ONLY by other users. (I want to read other people's Q&A but I shouldn't be able to do anything more than that.)
 
-*note: trying to avoid the things I don't like about social media, such as "likes" which I think spurs on insincerity online.
+*note: trying to avoid the things I don't like about social media, such as "likes" which I think spurs on insincere postings online.
 
 
-![image](public/tapestry.png)
+![image](public/images/tapestry.png)
+![image](public/images/tapestry-share.png)
 
 <br>
 

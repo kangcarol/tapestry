@@ -11,7 +11,7 @@
           alt="<%= profile.name %> avatar"
           />
         <% } %>
-      <h1> <%= profile.name %></h1>
+      <h1 id="avatar-name"> <%= profile.name %></h1>
     </div>
     <% profile.answers.forEach(answer => { %>
       <% if (answer.author.equals(profile._id)) { %>
@@ -36,7 +36,7 @@
           method="POST"
         >
           <input name="text">
-          <button type="submit" class="btn btn-secondary btn-sm">add</button>
+          <button type="submit" class="btn btn-warning btn-sm">add</button>
         </form>
       </div>
       </details>
@@ -51,14 +51,14 @@
               value=" <%= answer.text %> "
               autocomplete="off"
             >
-            <button class="btn btn-secondary btn-sm" type="submit">update</button>
+            <button class="btn btn-success btn-sm" type="submit">update</button>
           </form>
           <form
             action="/answers/<%= answer._id %>?_method=DELETE"
             method="POST"
             style="display: inline-block;"
           >
-            <button class="btn btn-secondary btn-sm" type="submit">delete</button>
+            <button class="btn btn-danger btn-sm" type="submit">delete</button>
           </form>
         </div>
         </details>
