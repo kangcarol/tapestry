@@ -32,12 +32,11 @@
             <details>
               <summary>add a comment</summary>
               <form
-                id="add-comment-form"
                 action="/answers/<%= answer._id %>/comments"
                 method="POST"
               >
                 <input name="text">
-                <button type="submit" class="btn btn-secondary btn-sm">add</button>
+                <button type="submit" class="btn btn-warning btn-sm">add</button>
               </form>
             </details>
           </div>
