@@ -17,7 +17,9 @@
 *note: trying to avoid the things I don't like about social media, such as "likes" which I think spurs on insincere postings online.
 
 ![image](public/images/tapestry.png)
-![admin](public/images/tapestry-share.png)
+
+
+Admin view:
 ![share](public/images/tapestry-admin.png)
 
 <br>
