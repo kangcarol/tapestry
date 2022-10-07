@@ -14,8 +14,6 @@
 5. AAU I want to see all my Q&As on one page, and be able to edit or delete.
 6. AAU I want my cards to be accessible to READ ONLY by other users. (I want to read other people's Q&A but I shouldn't be able to do anything more than that.)
 
-*note: trying to avoid the things I don't like about social media, such as "likes" which I think spurs on insincere postings online.
-
 ![image](public/images/tapestry.png)
 ![share](public/images/tapestry-admin.png)
 <br>
