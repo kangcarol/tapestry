@@ -11,7 +11,7 @@ const commentSchema = new Schema({
 
 
 const answerSchema = new Schema({
-  text: String,
+  text: { type: String, required: true},
   question: { type: Schema.Types.ObjectId, ref: "Question" },
   author: { type: Schema.Types.ObjectId, ref: "Profile" },
   comments: [commentSchema],
