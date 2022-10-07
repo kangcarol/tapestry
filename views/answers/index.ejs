@@ -12,37 +12,37 @@
             alt="<%= answer.author.name %> avatar"
           />
           <%= answer.author.name %>
-          </div>
-
-          <div id="qa-div">
-            <p class="question">
-              <%= answer.question.text %>
-            </p>
-            <p class="answer">
-              <%= answer.text %>
-            </p>
-            <% if (answer.comments.length > 0) { %>
-              <p>comments:</p>
-            <% } %>
-            <ul>
-              <% answer.comments.slice().reverse().forEach(function(comment) { %>
-                  <li class="comment-li"><%= comment.text %></li>
-              <% }) %>
-            </ul>
-            <details id="comment-form">
-              <summary>add a comment</summary>
-              <form
-                action="/answers/<%= answer._id %>/comments"
-                method="POST"
-              >
-                <input name="text">
-                <span></span>
-                <button type="submit" class="btn btn-warning btn-sm">add</button>
-              </form>
-            </details>
-          </div>
-
         </div>
+
+        <div id="qa-div">
+          <p class="question">
+            <%= answer.question.text %>
+          </p>
+          <p class="answer">
+            <%= answer.text %>
+          </p>
+          <% if (answer.comments.length > 0) { %>
+            <p>comments:</p>
+          <% } %>
+
+          <ul>
+            <% answer.comments.slice().reverse().forEach(function(comment) { %>
+                <li class="comment-li"><%= comment.text %></li>
+            <% }) %>
+          </ul>
+
+          <details id="comment-form">
+            <summary>add a comment</summary>
+            <form
+              action="/answers/<%= answer._id %>/comments"
+              method="POST"
+            >
+              <input name="text">
+              <span></span>
+              <button type="submit" class="btn btn-warning btn-sm">add</button>
+            </form>
+          </details>
+          </div>
       </div>
     <% }) %>
   </section>

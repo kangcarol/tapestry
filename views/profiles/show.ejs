@@ -15,17 +15,17 @@
     </div>
     <% profile.answers.slice().reverse().forEach(answer => { %>
       <% if (answer.author.equals(profile._id)) { %>
-      <div id="profile-qa-div">
-        <p class="question"><%= answer.question.text %></p>
-        <p class="answer"><%= answer.text %></p>
-        <% if (answer.comments.length > 0) { %>
-          <p>comments:</p>
-        <% } %>
-        <ul>
-          <% answer.comments.slice().reverse().forEach(function(comment) { %>
-              <li class="comment-li"><%= comment.text %></li>
-          <% }) %>
-        </ul>
+        <div id="profile-qa-div">
+          <p class="question"><%= answer.question.text %></p>
+          <p class="answer"><%= answer.text %></p>
+          <% if (answer.comments.length > 0) { %>
+            <p>comments:</p>
+          <% } %>
+          <ul>
+            <% answer.comments.slice().reverse().forEach(function(comment) { %>
+                <li class="comment-li"><%= comment.text %></li>
+            <% }) %>
+          </ul>
       <% } %>
       <details>
         <summary>add a comment</summary>
@@ -44,26 +44,25 @@
       <% if (answer.author.equals(user?.profile._id)) { %>
         <details>
           <summary>update or delete question</summary>
-          <form action="/answers/<%= answer._id %>?_method=PUT" method="POST">
-            <div class="form-div">
-            <input
-              type="text"
-              name="text"
-              value=" <%= answer.text %> "
-              autocomplete="off"
+          <div class="form-div">
+            <form action="/answers/<%= answer._id %>?_method=PUT" method="POST">
+              <input
+                type="text"
+                name="text"
+                value=" <%= answer.text %> "
+                autocomplete="off"
+              >
+              <span></span>
+              <button class="btn btn-success btn-sm" type="submit">update</button>
+            </form>
+            <form id="delete-form"
+              action="/answers/<%= answer._id %>?_method=DELETE"
+              method="POST"
+              style="display: inline-block;"
             >
-            <span></span>
-            <button class="btn btn-success btn-sm" type="submit">update</button>
-          </form>
-          <!-- <span></span> -->
-          <form id="delete-form"
-            action="/answers/<%= answer._id %>?_method=DELETE"
-            method="POST"
-            style="display: inline-block;"
-          >
-            <button class="btn btn-danger btn-sm" type="submit">delete</button>
-          </form>
-        </div>
+              <button class="btn btn-danger btn-sm" type="submit">delete</button>
+            </form>
+          </div>
         </details>
       <% } %>
     </div>
