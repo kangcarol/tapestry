@@ -17,7 +17,8 @@
 <br>
 
  ## Visual Inspiration
- With the app's title being Tapestry, it brought to mind Annie Albers who was an artist, weaver, and participant in the Bauhaus art movement during the early 1920's.  This movement included not only art, but spanned typography, architecture and the crafts.  Their design principles included, "less is more" and "form follows funciton". Not only did I reference their aesthetic, but followed their principles when decisions needed to be made.
+
+ With the app's title being Tapestry, it brought to mind [Anni Albers](https://en.wikipedia.org/wiki/Anni_Albers) who was an artist, weaver, and participant in the [Bauhaus art movement](https://www.metmuseum.org/toah/hd/bauh/hd_bauh.htm) during the early 1920's.  This movement included not only art, but spanned typography, architecture and the crafts.  Their design principles included, "less is more" and "form follows funciton". Not only did I reference their aesthetic, but followed their principles when decisions needed to be made.
 
 
 ![image](public/images/tapestry.png)
