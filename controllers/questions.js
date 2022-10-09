@@ -6,7 +6,7 @@ function index(req, res) {
   .then(questions => {
     res.render('questions/index', {
       questions,
-      title: "questions"
+      title: "share your experiences"
     })
   })
   .catch(err => {
