@@ -1,6 +1,6 @@
 # fly.toml file generated for ckang-tapestry-app on 2022-10-08T22:25:25-04:00
 
-app = "ckang-tapestry-app"
+app = "carolkang-tapestry-app"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
