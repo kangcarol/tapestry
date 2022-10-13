@@ -28,7 +28,7 @@ Admin view above
 
 <br>
 
- ## Get started [here](https://ckang-tapestry-app.fly.dev/) <br>
+ ## Get started [here](https://carolkang-tapestry-app.fly.dev/) <br>
 <br>
 
  ## Planning
