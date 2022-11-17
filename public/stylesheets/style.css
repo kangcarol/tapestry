@@ -24,9 +24,13 @@ nav {
   color:  rgb(230, 227, 211);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   min-height: 40px;
+  position: fixed;
+  top: 0;
 }
+
+#hamnav label, #hamburger { display: none; }
 
 main {
   display: flex;
@@ -36,8 +40,8 @@ main {
 }
 
 section {
-  max-width: 80%;
-  min-width: 80%;
+  width: 660%;
+  width: 60%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -142,22 +146,24 @@ button {
 
 a {
   color: rgb(230, 227, 211);
+  justify-content: space-between;
   text-decoration: none;
   text-align: center;
+  padding: 0 20px;
+  font-size: 1em;;
 }
 
-nav > a {
+#hamitems {
   margin: 10px 20px;
   text-decoration: none;
-  font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 1em;
   color:rgb(230, 227, 211);
 }
 
-nav > a:hover {
+#hamitems > a:hover {
   color:  rgb(255, 0, 0);
 }
 
@@ -190,7 +196,7 @@ nav > a:active {
 
 #question-line {
   margin: 0 10px 10px 0px;
-  color:  rgb(0, 151, 80);
+  color: rgb(250, 246, 227);
 }
 
 #primary-qa-div {
@@ -295,7 +301,6 @@ summary:hover {
 }
 
 #nav-avatar-div {
-  padding: 0 40px 0 0;
   border-radius: 50%;
   align-items: center;
 }
@@ -329,7 +334,6 @@ summary:hover {
 
   main {
     width: 100%;
-    /* border: 3px solid white; */
   }
 
   section {
@@ -337,22 +341,19 @@ summary:hover {
     padding: 0 10px;
   }
 
-  nav  {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: flex-start; */
-    padding: 0 0 40% 0;
-  }
-
   #container{
     width: 80%;
     height: 100vh ;
   }
 
+  h1 {
+    font-size: 1.5em;
+  }
+
   .tapestry-header {
     font-size: 3.5em;
     color:  rgb(0, 151, 80);
-    padding: 30% 0 0 0;
+    /* padding: 30% 0 0 0; */
   }
 
   h4 {
@@ -363,7 +364,6 @@ summary:hover {
   }
 
   .intro-text {
-
     width: 80%;
   }
 
@@ -404,8 +404,8 @@ summary:hover {
     font-size: 1em;
     padding: 0;
     word-wrap: break-word;
+    
   }
-
   input {
     width: 100%;
     font-size: .85em;
@@ -416,6 +416,43 @@ summary:hover {
     flex-direction: column;
     padding: 0;
   }
+
+
+  /* ------- */
+
+  #hamnav {
+    width: 100%;
+    background: #000;
+    /* Optional */
+    position: fixed;
+    top: 0;
+    padding: 0 40px 0 0;
+  }
+
+  /* (A) BREAK INTO VERTICAL MENU */
+  #hamitems a {
+    box-sizing: border-box;
+    display: block;
+    width: 400px;
+    text-align: right;
+    justify-content: space-between;
+
+  }
+
+  /* (B) SHOW HAMBURGER ICON */
+  #hamnav label {
+    display: inline-block;
+    color: rgb(230, 227, 211);
+    background: black;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px 20px;
+  }
+
+  /* (C) TOGGLE SHOW/HIDE MENU */
+  #hamitems { display: none; }
+  #hamnav input:checked ~ #hamitems { display: block; }
+
 
 }
 

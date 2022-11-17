@@ -3,33 +3,43 @@
 <% } %>
 </head>
 <body>
-<nav class="navbar fixed-top">
+<nav class="navbar fixed-top" id="hamnav">
   <div id="tapestry-logo-div">
     <a class="navbar-brand" href="/">
       <img id="tapestry-logo" src="/images/tapestry-nav-logo.png"   class="d-inline-block align-top" alt="tapestry-logo">
     </a>
   </div>
 
-  <a href="/about">about</a>
 
-  <% if (user) { %>
-    <% if (user?.profile.avatar) { %>
-      <a href="/answers">all</a>
-      <a href="/questions">share your experiences</a>
-      <a href="/profiles">get to know someone</a>
-      <% } %>
-      <a href="/auth/logout">log out</a>
-      <% if (user.profile.admin) { %>
-        <a href="/questions/new">admin</a>
+  
+  <label for="hamburger">&#9776;</label>
+  <input type="checkbox" id="hamburger"/>
+
+  <div id="hamitems">
+    <a href="/about">about</a>
+    <% if (user) { %>
+      <% if (user?.profile.avatar) { %>
+        <a href="/answers">all</a>
+        <a href="/questions">share your experiences</a>
+        <a href="/profiles">get to know someone</a>
         <% } %>
-        <div id="nav-avatar-div">
-          <a href="/profiles/<%= user.profile._id %>">
-          <img id="nav-avatar"
-            src="<%= user.profile.avatar %>"
-            alt="<%= user.profile.name %> avatar"
-            height="38px"
-            width="38px"
-        /> </a>
-      </div>
+
+        <a href="/auth/logout">log out</a>
+
+        <% if (user.profile.admin) { %>
+          <a href="/questions/new">admin</a>
+          <% } %>
+
+          <div id="nav-avatar-div">
+            <a href="/profiles/<%= user.profile._id %>">
+              <img id="nav-avatar"
+                src="<%= user.profile.avatar %>"
+                alt="<%= user.profile.name %> avatar"
+                height="38px"
+                width="38px"
+              />
+            </a>
+        </div>
+    </div>
   <% } %>
 </nav>
