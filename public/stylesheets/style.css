@@ -317,7 +317,6 @@ a:hover, summary:hover {
 #tapestry-logo-div {
   display: flex;
   vertical-align: center;
-  padding: 0 0 0 40px;
 }
 
 #google-login {
@@ -427,7 +426,7 @@ a:hover, summary:hover {
     /* Optional */
     position: fixed;
     top: 0;
-    padding: 0 40px 0 0;
+    padding: 0 2%;
   }
 
   /* (A) BREAK INTO VERTICAL MENU */
@@ -437,6 +436,9 @@ a:hover, summary:hover {
     width: 400px;
     text-align: right;
     justify-content: space-between;
+    padding: 0 60px 0 0;
+    color: rgb(249, 207, 56);
+
 
   }
 
