@@ -298,6 +298,8 @@ summary:hover {
 
 #dad-profile, h4 {
   color: rgb(249, 207, 56);
+  margin: 0;
+  padding: 0;
 }
 
 #nav-avatar-div {
