@@ -36,8 +36,8 @@ main {
 }
 
 section {
-  max-width: 800px;
-  min-width: 800px;
+  max-width: 80%;
+  min-width: 80%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -83,22 +83,23 @@ ul {
 }
 
 input, summary, details {
-  width: 600px;
   color: rgb(230, 227, 211);
-  font-size: 14px;
+  font-size: 1em;
   word-wrap: break-word;
+  font-size: 1em;
 }
 
 details, summary {
-  font-size: 18px;
+  font-size: 1em;
   margin: 0 5px 10px 5px;
   word-wrap: break-word;
   padding: 0 0 0 30px;
+  width: 100%;
 }
 
 input {
   height: 25px;
-  width: 400px;
+  width: 50%;
   color: black;
   margin: 0 2px;
   padding: 0 10px 0 5px;
@@ -106,6 +107,7 @@ input {
 
 span {
   width: 10px;
+  height: 10px;
 }
 
 #delete-form {
@@ -116,7 +118,7 @@ span {
   width: 100%;
   color: rgb(230, 227, 211);
   font-size: 18px;
-  padding: 0 10px 0 10px;
+  padding: 0;
   word-wrap: break-word;
 }
 
@@ -127,7 +129,7 @@ ul, li {
 }
 
 p {
-  font-size: 18px;
+  font-size: 1em;
   margin: 0 5px 10px 30px;
   padding: 0 0 0 10px;
   color:  rgb(237, 220, 122);
@@ -135,6 +137,7 @@ p {
 
 button {
   padding: 0 5px;
+  width: 70px;
 }
 
 a {
@@ -200,9 +203,8 @@ nav > a:active {
 .qa-div {
   display: flex;
   justify-content: flex-start;
-  width: 600px;
+  width: 65%;
   word-wrap: break-word;
-  width: 90%;
 }
 
 .question {
@@ -210,14 +212,16 @@ nav > a:active {
   color: rgb(249, 207, 56);
   padding: 0 0 0 10px;
   word-wrap: break-word;
-  width: 90%;
+  width: 100%;
+  font-size: 1em;
 }
 
 .answer {
   color:  rgb(0, 151, 80);
   padding: 0 0 0 10px;
   word-wrap: break-word;
-  width: 90%;
+  width: 75%;
+  font-size: 1em;
 }
 
 .comment-li {
@@ -232,7 +236,7 @@ summary:hover {
 .avatar-name-div {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start
+  justify-content: center;
   align-items: center;
   text-align: center;
   width: 150px;
@@ -312,3 +316,107 @@ summary:hover {
 #google-login {
   margin: 40px 0 40px 0;
 }
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: black;
+    background-image: url('/images/bh1.jpg');
+    background-size: 360%;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    height: 100vh;
+  }
+
+  main {
+    width: 100%;
+    /* border: 3px solid white; */
+  }
+
+  section {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  nav  {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-start; */
+    padding: 0 0 40% 0;
+  }
+
+  #container{
+    width: 80%;
+    height: 100vh ;
+  }
+
+  .tapestry-header {
+    font-size: 3.5em;
+    color:  rgb(0, 151, 80);
+    padding: 30% 0 0 0;
+  }
+
+  h4 {
+    font-size: 1em;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0 20px;
+  }
+
+  .intro-text {
+
+    width: 80%;
+  }
+
+  .about-text {
+    padding: 30px 0 10px 0;
+    color: rgb(250, 246, 227);
+    margin: 0 10px 10px 10px;
+  }
+
+  #primary-qa-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 15px 0 30px 0;
+    width: 90%;
+  }
+
+  #comment-form, summary {
+    padding: 0;
+  }
+
+  .avatar-name-div {
+    padding: 0 0 10% 30%;
+  }
+
+  .question, .answer {
+    padding: 0;
+    margin: 0;
+  }
+
+  details, summary {
+    padding: 0;
+  }
+  
+  #summary-share {
+    width: 100%;
+    color: rgb(230, 227, 211);
+    font-size: 1em;
+    padding: 0;
+    word-wrap: break-word;
+  }
+
+  input {
+    width: 100%;
+    font-size: .85em;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+}
+
+
