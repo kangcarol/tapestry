@@ -48,6 +48,7 @@ Mongoose, MongoDB, Express, Node, JavaScript (and embedded in HTML), CSS, Git, B
 - Questions came from googling "opposite of small talk", many sources, these are the primary:
   - [Questions](https://thoughtcatalog.com/melanie-berliet/2016/01/50-revealing-questions-that-arent-too-deep-so-you-can-skip-the-small-talk-on-every-date/)
   - [More Questions](https://beardstrokings.com/conversation-starters-that-skip-small-talk/)
+  - [Responsive Nav](https://code-boxx.com/simple-responsive-pure-css-hamburger-menu/)
 
 <br>
 
