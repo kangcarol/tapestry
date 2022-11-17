@@ -235,7 +235,7 @@ nav > a:active {
   color: rgb(230, 227, 211);
 }
 
-summary:hover {
+a:hover, summary:hover {
   color:  rgb(255, 0, 0);
 }
 
@@ -355,7 +355,6 @@ summary:hover {
   .tapestry-header {
     font-size: 3.5em;
     color:  rgb(0, 151, 80);
-    /* padding: 30% 0 0 0; */
   }
 
   h4 {
