@@ -33,3 +33,19 @@ section {
 summary {
   padding: 0 0 0 30px;
 }
+
+input {
+  width: 80%;
+}
+
+.form-div {
+  padding: 0 0 0 30px;
+}
+
+@media only screen and (max-width: 768px) {
+
+  section {
+    width: 80%;
+  }
+
+}

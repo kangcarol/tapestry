@@ -8,7 +8,7 @@
     <h1 id="click-question">share your experiences</h1>
     <% questions.slice().reverse().forEach(question => { %>
       <div class="new-question">
-        <details>
+        <details class="summary-share">
           <summary id="summary-share"><%= question.text %></a></summary>
           <% if (user) { %>
             <form action="/answers" method="POST">
